@@ -82,7 +82,7 @@
 
                     echo "<div class='nav2'>";
                     echo "<li class='nav__item'><a class='nav__link' href='../profile.php'><i class='fas fa-user-circle   My-faEdit'></i>Profile</a></li>";
-                    echo "<li class='nav__item'><a class='nav__link' href=''><i class='fas fa-history   My-faEdit'></i>History</a></li>";
+                    echo "<li class='nav__item'><a class='nav__link' href='History.php'><i class='fas fa-history   My-faEdit'></i>History</a></li>";
                     echo "</div>";
                   }
                  
