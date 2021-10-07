@@ -50,7 +50,7 @@ if (session_status() === PHP_SESSION_NONE) {
     <div class="leftNav">
       <div class="nav__list nav__list--primary">
         <div class="nav1">
-          <li class="nav__item"><a class="nav__link" href="http://localhost/WT(indus%20sem5)/Travel/view/MainPage.php"><i class="fas fa-home   My-faEdit"></i>Home</a></li>
+          <li class="nav__item"><a class="nav__link" href="MainPage.php"><i class="fas fa-home   My-faEdit"></i>Home</a></li>
           <li class="nav__item"><a class="nav__link" href="#aboutUs"> <i class="fas fa-info   My-faEdit" style="margin-left:5px;"></i>About Us</a></li>
         </div>
         
