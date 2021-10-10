@@ -102,7 +102,7 @@
 
         <div class="full-structure">
             <div class="left-heroimg">
-                <img src="<?php echo '../..'.$row['heroImg']; ?>">
+                <img src="<?php echo '../..'.$row[9]; ?>">
             </div>
             <div class="right-Data">
                             <div class="detail-heading">

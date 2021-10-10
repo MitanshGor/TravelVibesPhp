@@ -128,14 +128,14 @@
                           {
                               
                               echo "<div class='carousel-item active'>";
-                              echo "<img src='../..".$row[2]."' class='d-block w-100' alt='...' style='height:700px; width:100vw; '>" ; 
+                              echo "<img src='../../".$row[2]."' class='d-block w-100' alt='...' style='height:700px; width:100vw; '>" ; 
                               echo "</div>";
                               $i1++;
                           }
                           else
                           {
                               echo "<div class='carousel-item '>";
-                              echo "<img src='../..".$row[2]."' class='d-block w-100' alt='...' style='height:700px; width:100vw;'>"; 
+                              echo "<img src='../../".$row[2]."' class='d-block w-100' alt='...' style='height:700px; width:100vw;'>"; 
                               echo "</div>";
                           }
      
