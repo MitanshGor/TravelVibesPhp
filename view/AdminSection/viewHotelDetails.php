@@ -76,7 +76,7 @@
 
         <div class="full-structure">
             <div class="left-heroimg">
-                <img src="<?php echo '../..'.$row['heroImg']; ?>">
+                <img src="<?php echo '../..'.$row[9]; ?>">
             </div>
             <div class="right-Data">
                             <div class="detail-heading">
@@ -146,7 +146,7 @@
                                   <?php
                                     while ($row = mysqli_fetch_array($conSql)){
                                   ?>
-                                      <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="" data-lightbox="photos"><img class="img-fluid" src="../..<?php echo ''.$row['Image'] ?>"></a></div>
+                                      <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="" data-lightbox="photos"><img class="img-fluid" src="../../<?php echo ''.$row['Image'] ?>"></a></div>
                                     <?php
                                         }
                                     ?>

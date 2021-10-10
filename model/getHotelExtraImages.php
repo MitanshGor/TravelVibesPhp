@@ -1,15 +1,13 @@
-<div hidden style="visibility:hidden; display:none;">
+<div style="color:red;">
     <?php
           
             include 'mysqlConnection.php';
             // include '../constants/constants.php';
-            $hotelImageTable="hotelimages";
+            $hotelImageTable="hotelimage";
                     
             $sql = "select * from ".$hotelImageTable." where hotelid=".$_GET['hotelid'].";";
             $conSql=mysqli_query($con,$sql);
 
-
-            //$exeQuery = mysqli_query($queryContents);
             if(mysqli_num_rows($conSql)<0){
                 echo "<script>";
                 echo "alert('Hotel Images Not Available !!');";

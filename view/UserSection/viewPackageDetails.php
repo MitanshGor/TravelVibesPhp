@@ -172,7 +172,7 @@
 ?>
         <div class="full-structure">
             <div class="left-heroimg">
-                <img src="<?php echo "../..".$row['heroimg'] ?>">
+                <img src="<?php echo "../..".$row[2] ?>">
             </div>
             <div class="right-Data">
                             <div class="detail-heading">
@@ -186,7 +186,7 @@
                         <div class="left-up-info">
                             State : <?php echo "".$row['state']?><br>
                             Ticket Price : <?php echo "".$row['price']?> Rs<br>
-                            Transport :  <?php echo "".$row['modeOfTransport']?><br>
+                            Transport :  <?php echo "".$row[5]?><br>
                         </div>
                         <div class="right-up-info">
                             Creation Date : <?php echo "".$row['packageCreationDT']?>
@@ -202,7 +202,24 @@
                         </div>
                         <div class="right-low-info">
                           <form action="BookPackage.php?packageId=<?php echo "".$row[0]; ?>" method="post" enctype="multipart/form-data">
-                              <label  for="submit">Book Now</label>
+                          
+                          <?php
+                              if(isset($_SESSION['userType'])===true)
+                              {
+                                if($_SESSION['userType']!=='admin')
+                                {
+                                  echo " <label  for='submit'>Book Now</label>";
+                                } 
+                                else
+                                {  
+                                  echo " <label >Book Now</label>";
+                                }
+                            }
+                              else{
+                                echo " <label  >Book Now</label>";
+                          }?>
+                         
+                              
                               <input hidden id="submit" name="submit" type="submit" value="Book Now"/>
                           </form>
                         </div>

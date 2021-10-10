@@ -1,5 +1,5 @@
 
-<div style="width:100vw; height:100vh; background-color:black;">
+<div style="width:100vw;height:100vh;background-color: black;">
 
 
     <div hidden>
@@ -13,37 +13,35 @@
         if (isset( $_POST['submit']))
         {
                 $Id=$_POST["hotelId"];
-                $hotelimages="hotelimages";
+                $hotelimages="hotelimage";
 
                 $filename = $_FILES["file"]["name"];
                 $tempname = $_FILES["file"]["tmp_name"];
                 
-                echo "File Name = ".$filename;
+                echo "<br>File Name = ".$filename;
                 echo "<br>Tmp Name = ".$tempname;
                 
                 echo "<br>hotel Id = ".$Id;
                 echo "<br>Packeg ERROR = ".$_FILES["file"]["error"];
-                $Catch=false;
-
+                
                 $target_file=null;
                 $Catch=false;
-                $check=false;
-                    if(isset($_FILES["file"]["error"])==1){
-                            $check = getimagesize($_FILES["file"]["tmp_name"]);    
-                            print_r($check);                                 
+
+                    if(isset($_FILES["file"]["tmp_name"])==1){
+                        echo "<br>innnnnnnnnn<br>";
+                        $check = getimagesize($_FILES["file"]["tmp_name"]);                                     
                     }
                     else{
                         $catch=true;
                         $Catch=true;
                     }
-                    
+
                     if($check !== false && $Catch===false) 
                     {
-                        $target_dir = $_SERVER['DOCUMENT_ROOT']."/WT(indus sem5)/Travel/assets/Images/HotelImages/";
+                        $target_dir = $_SERVER['DOCUMENT_ROOT']."/WT(indus sem5)/travelvibes/assets/Images/HotelImages/";
                         $uploadOk = 0;
                         $target_file = $target_dir.''.$Id.'/Extra/'.basename($_FILES["file"]["name"]);              // getting the multipartfile data from the form
                         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));                 // check the extension weather it is jpg,png 
-                  
                         
 
                         if (file_exists($target_file)) {
@@ -87,7 +85,7 @@
 
                         if($target_file!==null)
                         {
-                            $sql="insert into ".$hotelimages." (".$hotelImagesId." , ".$Image.") values (".$Id.",'".substr($target_file,37)."');";
+                            $sql="insert into ".$hotelimages." (".$hotelImagesId." , ".$Image.") values (".$Id.",'".substr($target_file,43)."');";
                             echo "<br>sql Querry = ".$sql;
                             if (mysqli_query($con, $sql)) {
                                 echo "<script>";

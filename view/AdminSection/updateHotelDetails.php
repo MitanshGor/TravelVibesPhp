@@ -54,8 +54,6 @@
       include '../../model/GetHotelById.php';
       while ($row = mysqli_fetch_array($conSql)) {
   
-        echo "<div style='background-color:white;'>".$row[0]."</div>";
-        echo "<div style='background-color:white;'>".$row[1]."</div>";
       ?>
       <div class="mainBody">
             <div class="form__align">

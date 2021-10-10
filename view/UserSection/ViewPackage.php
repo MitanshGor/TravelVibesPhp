@@ -110,7 +110,7 @@
 ?>
               <div class="grid-item card-group" style="max-width: 400px;">
                                 <div class="card" style="background-color:rgba(252, 252, 252, 0.132);">
-                                    <?php echo "<img class='card-img-top' src='../..".$row[7]."' alt='...' style='max-height:400px;'>" ?>
+                                    <?php echo "<img class='card-img-top' src='../..".$row[2]."' alt='...' style='max-height:400px;'>" ?>
                                     <div class="card-body">
                                     <h5 class="card-title">
                                             <?php echo $row['packageName']; ?>

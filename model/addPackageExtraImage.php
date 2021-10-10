@@ -39,7 +39,7 @@
                     
                     if($check !== false && $Catch===false) 
                     {
-                        $target_dir = $_SERVER['DOCUMENT_ROOT']."/WT(indus sem5)/Travel/assets/Images/packageImages/";
+                        $target_dir = $_SERVER['DOCUMENT_ROOT']."/WT(indus sem5)/travelvibes/assets/Images/packageImages/";
                         $uploadOk = 0;
                         $target_file = $target_dir.''.$Id.'/Extra/'.basename($_FILES["file"]["name"]);              // getting the multipartfile data from the form
                         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));                 // check the extension weather it is jpg,png 
@@ -55,7 +55,7 @@
                                 else{
                                     echo "<script>";
                                     echo "alert('ERROR : Image was unable to save , please try again !!');";
-                                    echo "window.location.replace('../view/AdminSection/viewPackageDetails.php?packageId=".$Id."')"; //Redirects the user with JavaScript
+                                   echo "window.location.replace('../view/AdminSection/viewPackageDetails.php?packageId=".$Id."')"; //Redirects the user with JavaScript
                                     echo "</script>";
                                     die();
                                 }
@@ -67,7 +67,7 @@
                                 else{
                                     echo "<script>";
                                     echo "alert('ERROR : Image was unable to save , please try again !!');";
-                                    echo "window.location.replace('../view/AdminSection/viewPackageDetails.php?packageId=".$Id."')"; //Redirects the user with JavaScript
+                                   echo "window.location.replace('../view/AdminSection/viewPackageDetails.php?packageId=".$Id."')"; //Redirects the user with JavaScript
                                     echo "</script>";
                                     die();
                                 }
@@ -80,19 +80,19 @@
               
                       echo "<script>";
                       echo "alert('ERROR : Invalid Image File !!');";
-                      echo "window.location.replace('../view/AdminSection/viewPackageDetails.php?packageId=".$Id."')"; //Redirects the user with JavaScript
+                     echo "window.location.replace('../view/AdminSection/viewPackageDetails.php?packageId=".$Id."')"; //Redirects the user with JavaScript
                       echo "</script>";
                       die();
                     }
 
                         if($target_file!==null)
                         {
-                            $sql="insert into ".$packageimages." (".$packageImgid." , ".$Image.") values (".$Id.",'".substr($target_file,37)."');";
+                            $sql="insert into ".$packageimages." (".$packageImgid." , ".$Image.") values (".$Id.",'".substr($target_file,43)."');";
                             echo "<br>sql Querry = ".$sql;
                             if (mysqli_query($con, $sql)) {
                                 echo "<script>";
                                 echo "alert('Image Added Sucessfully !!');";
-                                echo "window.location.replace('../view/AdminSection/viewPackageDetails.php?packageId=".$Id."')"; //Redirects the user with JavaScript
+                               echo "window.location.replace('../view/AdminSection/viewPackageDetails.php?packageId=".$Id."')"; //Redirects the user with JavaScript
                                 echo "</script>";
                                 die(); //Stops PHP from further execution
                             
@@ -100,7 +100,7 @@
                              
                                 echo "<script>";
                                 echo "alert('Unable to Add Image ,Please Retry !!');";
-                                echo "window.location.replace('../view/AdminSection/viewPackageDetails.php?packageId=".$Id."')"; //Redirects the user with JavaScript
+                               echo "window.location.replace('../view/AdminSection/viewPackageDetails.php?packageId=".$Id."')"; //Redirects the user with JavaScript
                                 echo "</script>";
                                 die(); //Stops PHP from further execution
                             }

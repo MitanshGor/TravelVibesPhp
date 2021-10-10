@@ -75,7 +75,7 @@
 ?>
         <div class="full-structure">
             <div class="left-heroimg">
-                <img src="<?php echo "../..".$row['heroimg'] ?>">
+                <img src="<?php echo "../..".$row[2] ?>">
             </div>
             <div class="right-Data">
                             <div class="detail-heading">
@@ -89,7 +89,7 @@
                         <div class="left-up-info">
                             State : <?php echo "".$row['state']?><br>
                             Ticket Price : <?php echo "".$row['price']?> Rs<br>
-                            Transport :  <?php echo "".$row['modeOfTransport']?><br>
+                            Transport :  <?php echo "".$row[5]?><br>
                         </div>
                         <div class="right-up-info">
                             Creation Date : <?php echo "".$row['packageCreationDT']?>
@@ -138,7 +138,7 @@
                                   
                               while ($row = mysqli_fetch_array($conSql)){
                                   ?>
-                                  <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="" data-lightbox="photos"><img class="img-fluid" src="../..<?php echo ''.$row['Image'] ?>"></a></div>
+                                  <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="" data-lightbox="photos"><img class="img-fluid" src="../../<?php echo ''.$row['Image'] ?>"></a></div>
                                   <?php
                                     }
                                   ?>
