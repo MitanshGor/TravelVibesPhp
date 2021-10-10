@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <?php
 
-      include '../../controller/checkUserIsAdmin~~.php';
+      include '../../controller/checkUserIsAdmin.php';
       
 ?>
 <html lang="en">

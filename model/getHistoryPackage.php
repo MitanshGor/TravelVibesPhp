@@ -9,8 +9,12 @@
         include 'mysqlConnection.php';
     
           // this gives all the hotels booked by the user logged in
-        $sql = "select * from userbooking as u join billdata as b on u.billid=b.billid join package as p on p.packageid=u.packageid where u.userid=".$_SESSION['userId']." and u.hotelid=0 and b.TotalHotelPrice=0;";
-
+          if (isset($_SESSION['userId'])) {
+            $sql = "select * from userbooking as u join billdata as b on u.billid=b.billid join package as p on p.packageid=u.packageid where u.userid=".$_SESSION['userId']." and u.hotelid=0 and b.TotalHotelPrice=0;";
+          }
+          else{
+            $sql = "select * from userbooking as u join billdata as b on u.billid=b.billid join package as p on p.packageid=u.packageid where u.userid=".$_GET['userId']." and u.hotelid=0 and b.TotalHotelPrice=0;";
+          }
         $conSql=mysqli_query($con,$sql);
 
     if(mysqli_num_rows($conSql)<0){

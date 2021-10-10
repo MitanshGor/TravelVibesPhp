@@ -19,7 +19,7 @@
     else{
         echo "<script>";
         // echo "alert('No Hotels Available !!');";
-        echo "window.location.replace('../view/AdminSection/viewUsersDetail.php')"; //Redirects the user with JavaScript
+        echo "window.location.replace('../view/AdminSection/viewUserDetail.php')"; //Redirects the user with JavaScript
         echo "</script>";
         die();
     
