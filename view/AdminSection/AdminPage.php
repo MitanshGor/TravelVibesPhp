@@ -61,7 +61,7 @@
                 <li class="nav__item"><a class="nav__link" href=""><i class="fas fa-trash  My-faEdit"></i>Delete Pacakges</a></li> -->
             </div>
             <div class="nav2">
-                <li class="nav__item"><a class="nav__link" href=""><i class="fas fa-user  My-faEdit"></i>Users</a></li>
+                <li class="nav__item"><a class="nav__link" href="viewUserDetail.php"><i class="fas fa-user  My-faEdit"></i>Users</a></li>
                 <li class="nav__item"><a class="nav__link" href=""><i class="fas fa-search  My-faEdit"></i>Reviews</a></li>
             </div>
         </div>
