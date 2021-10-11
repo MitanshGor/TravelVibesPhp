@@ -182,36 +182,42 @@
                 </table>
         </div>
     </div>
- <!--                                                  FOOTER       -->
- <footer class="footer-section">
-    <br><br><br>
-    <div class="topFooter">
-      <div class="titles" onClick="redirectFunction()">
-        <img src="../../assets/Images/MainPage/logo.png" class="logo" alt="AirPlane Logo" />
-        <h1>Travel Vibes</h1>
+ 
+
+        <!--                                                  FOOTER       -->
+        <footer class="footer-section">
+      <br><br><br>
+      <div class="topFooter">
+        <div class="titles" onClick="redirectFunction()">
+          <img src="../assets/Images/MainPage/logo.png" class="logo" alt="AirPlane Logo" />
+          <h1>Travel Vibes</h1>
+        </div>
+        <div class="footer-nav">
+          <li class="nav__item" onClick="redirectFunction()"><a class="nav__link" href="MainPage.php">Home</a></li>
+          <li class="nav__item"><a class="nav__link" href="../MainPage.php#aboutUs">About Us</a></li>
+          <li class="nav__item"><a class="nav__link" href="ViewHotels.php">Hotels</a></li>
+          <li class="nav__item"><a class="nav__link" href="ViewPackage.php">Packages</a></li>
+          <li class="nav__item"><a class="nav__link" href="../MainPage.php#contact-us">Contact Us</a></li>
+          <li class="nav__item"><a class="nav__link" href="../login.php">Login</a></li>
+          <li class="nav__item"><a class="nav__link" href="../signin.php">Signin</a></li>
+        </div>
       </div>
-      <div class="footer-nav">
-        <li class="nav__item"><a class="nav__link" href="">Home</a></li>
-        <li class="nav__item"><a class="nav__link" href="">About Us</a></li>
-        <li class="nav__item"><a class="nav__link" href="">Explore</a></li>
-        <li class="nav__item"><a class="nav__link" href="">Contact Us</a></li>
-        <li class="nav__item"><a class="nav__link" href="">Login</a></li>
+      <div
+        class="underline"
+        style="width: 80%; background-color: rgb(49, 48, 48)"
+      ></div>
+      <div class="social-links">
+        <a href="https://linkedin.com/in/mitansh-gor-90a6201b3/"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://twitter.com/i/flow/login"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.facebook.com/login/"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/accounts/login/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/watch?v=eZLJnSoTWOI"><i class="fab fa-youtube"></i></a>
+        <a href="https://github.com/MitanshGor"><i class="fab fa-github"></i></a>
       </div>
-    </div>
-    <div
-      class="underline"
-      style="width: 80%; background-color: rgb(49, 48, 48)"
-    ></div>
-    <div class="social-links">
-      <a href=""><i class="fab fa-linkedin-in"></i></a>
-      <a href=""><i class="fab fa-twitter"></i></a>
-      <a href=""><i class="fab fa-facebook"></i></a>
-      <a href=""><i class="fab fa-instagram"></i></a>
-      <a href=""><i class="fab fa-youtube"></i></a>
-      <a href=""><i class="fab fa-github"></i></a>
-    </div>
-    <br><br><br>
-  </footer>
+      <br><br><br>
+    </footer>
+
+
   <script>
     const navToggle = document.querySelector(".nav-toggle");
     const nav = document.querySelector(".leftNav");
