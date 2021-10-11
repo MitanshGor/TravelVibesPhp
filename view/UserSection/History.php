@@ -44,22 +44,52 @@
         </div>
       </div>
       <!-- <div></div>                                           LEFT NAVIGATION              -->
-      <div class="leftNav">
-        <div class="nav__list nav__list--primary">
-            <div class="nav1">
-                <li class="nav__item"><a class="nav__link" href="createHotel.php"><i class="fas fa-plus  My-faEdit"></i>Create Hotel</a></li>
-                <li class="nav__item"><a class="nav__link" href="viewHotels.php"><i class="fas fa-list My-faEdit"></i>View Hotels</a></li>
-            </div>
-            <div class="nav1">
-            <li class="nav__item"><a class="nav__link" href="createPackage.php"><i class="fas fa-plus  My-faEdit"></i>Create Pacakges</a></li>
-            <li class="nav__item"><a class="nav__link" href="viewPackages.php"><i class="fas fa-list My-faEdit"></i>View Pacakges</a></li>
-            </div>
-            <div class="nav2">
-                <li class="nav__item"><a class="nav__link" href=""><i class="fas fa-user  My-faEdit"></i>Users</a></li>
-                <li class="nav__item"><a class="nav__link" href=""><i class="fas fa-search  My-faEdit"></i>Reviews</a></li>
-            </div>
+               <!-- <div></div>                                           LEFT NAVIGATION              -->
+               <div class="leftNav">
+      <div class="nav__list nav__list--primary">
+        <div class="nav1">
+          <li class="nav__item"><a class="nav__link" href="../MainPage.php"><i class="fas fa-home   My-faEdit"></i>Home</a></li>
+          <li class="nav__item"><a class="nav__link" href="../MainPage.php#aboutUs"> <i class="fas fa-info   My-faEdit" style="margin-left:5px;"></i>About Us</a></li>
+        </div>
+        
+        <div class="nav2">
+        <li class="nav__item"><a class="nav__link" href="ViewHotels.php"><i class="fas fa-warehouse  My-faEdit"></i>Hotel Booking</a></li>
+        <li class="nav__item"><a class="nav__link" href="ViewPackage.php"><i class="fas fa-bus My-faEdit"></i>Travel Packages</a></li>
+          <li class="nav__item"><a class="nav__link" href="../MainPage.php#contact-us"><i class="fas fa-handshake   My-faEdit"></i>Contact Us</a></li>
+        </div>
+        <?php
+
+              if(isset($_SESSION['userType'])!==true)
+              {
+                   echo "<div class='nav2'>";  
+                   echo "<li class='nav__item'><a class='nav__link' href='../login.php'><i class='fas fa-key   My-faEdit'></i>Login</a></li>"  ;
+                    echo "<li class='nav__item'><a class='nav__link ' href='../signin.php'><i class='fas fa-user-plus   My-faEdit'></i>Signup</a></li>" ; 
+                  echo "</div>" ;
+              }
+              else{
+
+                  if($_SESSION['userType']==='admin')
+                  {
+                    echo "<div class='nav2'>";
+                    echo "<li class='nav__item'><a class='nav__link' href='../AdminSection/AdminPage.php'><i class='fas fa-lock   My-faEdit'></i>Admin Page</a></li>";
+                    echo "</div>";
+                  }
+                  else{
+
+                    echo "<div class='nav2'>";
+                    echo "<li class='nav__item'><a class='nav__link' href='../profile.php'><i class='fas fa-user-circle   My-faEdit'></i>Profile</a></li>";
+                    echo "<li class='nav__item'><a class='nav__link' href='#'><i class='fas fa-history   My-faEdit'></i>History</a></li>";
+                    echo "</div>";
+                  }
+                 
+                  echo "<div class='nav2'>";
+                  echo "<li class='nav__item'><a class='nav__link' href='../../controller/logout.php'><i class='fas fa-key   My-faEdit'></i>Logout</a></li>";
+                  echo "</div>";
+              }
+        ?>
         </div>
       </div>
+ 
 
     <div class="mainBody" style=" display: flex; flex-direction: row; justify-content: space-around; align-items: flex-start; padding-top: 14rem;">
                             
@@ -156,7 +186,7 @@
  <footer class="footer-section">
     <br><br><br>
     <div class="topFooter">
-      <div class="titles">
+      <div class="titles" onClick="redirectFunction()">
         <img src="../../assets/Images/MainPage/logo.png" class="logo" alt="AirPlane Logo" />
         <h1>Travel Vibes</h1>
       </div>
@@ -195,14 +225,10 @@
         }
       );
     });
-    function redirectFunction()
-    {
-      
-      window.location.replace("http://localhost/WT(indus%20sem5)/Travel/view/MainPage.php");
-    }
+   
   </script>
   <!-- Option 1: Bootstrap Bundle with Popper -->
-
+  <script src="../../assets/js/MoveToMainPage.js"></script>
   <script
     src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

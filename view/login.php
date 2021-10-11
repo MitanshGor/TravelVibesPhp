@@ -58,7 +58,7 @@
     <footer class="footer-section">
       <br><br><br>
       <div class="topFooter">
-        <div class="titles">
+        <div class="titles" onClick="redirectFunction()">
           <img src="../assets/Images/MainPage/logo.png" class="logo" alt="AirPlane Logo" />
           <h1>Travel Vibes</h1>
         </div>

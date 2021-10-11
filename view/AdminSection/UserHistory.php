@@ -186,7 +186,7 @@
  <footer class="footer-section">
     <br><br><br>
     <div class="topFooter">
-      <div class="titles">
+      <div class="titles" onClick="redirectFunction()">
         <img src="../../assets/Images/MainPage/logo.png" class="logo" alt="AirPlane Logo" />
         <h1>Travel Vibes</h1>
       </div>
@@ -225,14 +225,10 @@
         }
       );
     });
-    function redirectFunction()
-    {
-      
-      window.location.replace("http://localhost/WT(indus%20sem5)/Travel/view/MainPage.php");
-    }
+    
   </script>
   <!-- Option 1: Bootstrap Bundle with Popper -->
-
+  <script src="../../assets/js/MoveToMainPage.js"></script>
   <script
     src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

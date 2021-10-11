@@ -56,11 +56,12 @@
             <li class="nav__item"><a class="nav__link" href="viewPackages.php"><i class="fas fa-list My-faEdit"></i>View Pacakges</a></li>
             </div>
             <div class="nav2">
-                <li class="nav__item"><a class="nav__link" href=""><i class="fas fa-user  My-faEdit"></i>Users</a></li>
-                <li class="nav__item"><a class="nav__link" href=""><i class="fas fa-search  My-faEdit"></i>Reviews</a></li>
+                <li class="nav__item"><a class="nav__link" href="viewUserDetail.php"><i class="fas fa-user  My-faEdit"></i>Users</a></li>
+                <li class="nav__item"><a class="nav__link" href="review.php"><i class="fas fa-search  My-faEdit"></i>Reviews</a></li>
             </div>
         </div>
       </div>
+
 
       
     <div class="mainBody">
@@ -158,7 +159,7 @@
  <footer class="footer-section">
     <br><br><br>
     <div class="topFooter">
-      <div class="titles">
+      <div class="titles" onClick="redirectFunction()">
         <img src="../../assets/Images/MainPage/logo.png" class="logo" alt="AirPlane Logo" />
         <h1>Travel Vibes</h1>
       </div>
@@ -197,14 +198,10 @@
           }
         );
       });
-      function redirectFunction()
-      {
-        
-        window.location.replace("http://localhost/WT(indus%20sem5)/Travel/view/MainPage.php");
-      }
+      
     </script>
     <!-- Option 1: Bootstrap Bundle with Popper -->
-
+    <script src="../../assets/js/MoveToMainPage.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

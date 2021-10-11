@@ -51,21 +51,18 @@
             <div class="nav1">
                 <li class="nav__item"><a class="nav__link" href="createHotel.php"><i class="fas fa-plus  My-faEdit"></i>Create Hotel</a></li>
                 <li class="nav__item"><a class="nav__link" href="viewHotels.php"><i class="fas fa-list My-faEdit"></i>View Hotels</a></li>
-                <!-- <li class="nav__item"><a class="nav__link" href=""><i class="fas fa-puzzle-piece  My-faEdit"></i>Update Hotel</a></li>
-                <li class="nav__item"><a class="nav__link" href=""><i class="fas fa-trash  My-faEdit"></i>Delete Hotel</a></li> -->
             </div>
             <div class="nav1">
             <li class="nav__item"><a class="nav__link" href="createPackage.php"><i class="fas fa-plus  My-faEdit"></i>Create Pacakges</a></li>
             <li class="nav__item"><a class="nav__link" href="viewPackages.php"><i class="fas fa-list My-faEdit"></i>View Pacakges</a></li>
-                <!-- <li class="nav__item"><a class="nav__link" href=""><i class="fas fa-puzzle-piece  My-faEdit"></i>Update Packages</a></li>
-                <li class="nav__item"><a class="nav__link" href=""><i class="fas fa-trash  My-faEdit"></i>Delete Pacakges</a></li> -->
             </div>
             <div class="nav2">
                 <li class="nav__item"><a class="nav__link" href="viewUserDetail.php"><i class="fas fa-user  My-faEdit"></i>Users</a></li>
-                <li class="nav__item"><a class="nav__link" href=""><i class="fas fa-search  My-faEdit"></i>Reviews</a></li>
+                <li class="nav__item"><a class="nav__link" href="review.php"><i class="fas fa-search  My-faEdit"></i>Reviews</a></li>
             </div>
         </div>
       </div>
+
 
     <div class="mainBody">
         <div
@@ -286,7 +283,7 @@
  <footer class="footer-section">
     <br><br><br>
     <div class="topFooter">
-      <div class="titles">
+      <div class="titles" onClick="redirectFunction()">
         <img src="../../assets/Images/MainPage/logo.png" class="logo" alt="AirPlane Logo" />
         <h1>Travel Vibes</h1>
       </div>
@@ -325,12 +322,9 @@
         }
       );
     });
-    function redirectFunction()
-    {
-      
-      window.location.replace("http://localhost/WT(indus%20sem5)/Travel/view/MainPage.php");
-    }
+   
   </script>
+      <script src="../../assets/js/MoveToMainPage.js"></script>
   <!-- Option 1: Bootstrap Bundle with Popper -->
 
   <script

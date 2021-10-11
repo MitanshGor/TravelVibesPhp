@@ -14,7 +14,7 @@ if (isset( $_POST['signin'] ) )
 
     $target_file=null;
     $Catch=false;
-        if(isset($_FILES["file"]["tmp_name"])===0){
+         if(isset($_FILES["file"]["tmp_name"])==1){
             $check = getimagesize($_FILES["file"]["tmp_name"]);                                     
         }
         else{
@@ -24,7 +24,7 @@ if (isset( $_POST['signin'] ) )
    
     if($check !== false && $Catch===false) 
     {    
-        $target_dir = $_SERVER['DOCUMENT_ROOT']."/WT(indus sem5)/Travel/assets/Images/UserProfileImages/";
+        $target_dir = $_SERVER['DOCUMENT_ROOT']."/WT(indus sem5)/travelvibes/assets/Images/UserProfileImages/";
         $uploadOk = 0;
         $target_file = $target_dir.''.$name.'/'.basename($_FILES["file"]["name"]);              // getting the multipartfile data from the form
         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));                 // check the extension weather it is jpg,png 
@@ -77,7 +77,7 @@ if (isset( $_POST['signin'] ) )
 
     
     $sql = "INSERT INTO ".$userTable." (".$userName.", ".$userEmail.", ".$mobileNo." , ".$password.",".$AccCreatedOn.",".$heroimg.")
-    VALUES ('".$name."', '".$email."', '".$mobile."','".$pwd."','".$accCreationDate."' ,'".(($target_file!==NULL)?substr($target_file,37):"/assets/Images/UserProfileImages/profile.png")."')";
+    VALUES ('".$name."', '".$email."', '".$mobile."','".$pwd."','".$accCreationDate."' ,'".(($target_file!==NULL)?substr($target_file,43):"/assets/Images/UserProfileImages/profile.png")."')";
     if (mysqli_query($con, $sql)) {
        
 
