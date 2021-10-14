@@ -5,3 +5,6 @@ Website made where user can book the packages and hotels which are created by th
 
 
 HEROKU LINK : https://travel-vibes18.herokuapp.com/view/MainPage.php
+
+
+![alt text](https://github.com/MitanshGor/TravelVibesPhp/blob/master/ReadMeImages/BookHOtelPage.png)
