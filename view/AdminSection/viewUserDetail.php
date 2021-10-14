@@ -65,7 +65,7 @@
 
     <div class="mainBody">
         <div class="sub-title">
-          <h1>Hotels List</h1>
+          <h1>Users List</h1>
           <div class="underline"></div>
         </divm>
     <?php

@@ -55,7 +55,7 @@ include '../constants/constants.php';
 
                     if($check !== false && $Catch===false)          // image is adde by the user and we have to add it into the DB
                     {
-                        $target_dir = $_SERVER['DOCUMENT_ROOT']."/WT(indus sem5)/Travel/assets/Images/packageImages/";
+                        $target_dir = $_SERVER['DOCUMENT_ROOT']."/WT(indus sem5)/travelVibes/assets/Images/packageImages/";
                         $target_file = $target_dir.''.$id.'/'.basename($_FILES["file"]["name"]);        // getting the multipartfile data from the form
                         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));                 // check the extension weather it is jpg,png 
                         
@@ -75,7 +75,7 @@ include '../constants/constants.php';
                            
                             if(move_uploaded_file($_FILES["file"]["tmp_name"],$target_file)) 
                             {                 
-                                $sqlAddImg="update ".$packageTable." set ".$heroimg." = '".substr($target_file,37)."' where ".$packageId." = ".$id.";";
+                                $sqlAddImg="update ".$packageTable." set ".$heroimg." = '".substr($target_file,43)."' where ".$packageId." = ".$id.";";
                                 echo "<br><br> sqlAdd image : ".$sqlAddImg;
                                 if (mysqli_query($con, $sqlAddImg)) 
                                 {
