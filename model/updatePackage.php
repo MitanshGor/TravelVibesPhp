@@ -17,7 +17,7 @@ include '../constants/constants.php';
         $features=htmlspecialchars($_POST['features']);
         
 
-            echo "-----------------------".$packageCreationDate."-----------------------------";
+            // echo "-----------------------".$packageCreationDate."-----------------------------";
             // SQL ADDED THE DATA
             $sql = "update ".$packageTable." set ".
             $apckageName." = '".$name."' ,".
@@ -34,22 +34,22 @@ include '../constants/constants.php';
             //  VALUES (
             //      '".$name."' , '".$state."' , ".$price." , '".$mot."' , '".$features."' , ". $ticketsAvail." , '".$startDate."' , '".$endDate."' , '".$packageCreationDate."');";      
             
-            echo "sql  :".$sql;
+            // echo "sql  :".$sql;
                  if (mysqli_query($con, $sql)) 
                 {
                     // Data is set in the sql now add the image 
                     $target_file=null;
                     $Catch=false;
                     $check=false;
-                    echo '<br>'.isset($_FILES["file"]["tmp_name"]).'<br>'.isset($_FILES["file"]["tmp_name"]);
+                    // echo '<br>'.isset($_FILES["file"]["tmp_name"]).'<br>'.isset($_FILES["file"]["tmp_name"]);
                     if($_FILES['file']['size'] != 0 )  
                     {
-                        echo "going in";
+                        // echo "going in";
                          $check = getimagesize($_FILES["file"]["tmp_name"]);                                     
                     }
                     else
                     {
-                        echo "going Out";
+                        // echo "going Out";
                         $Catch=true;
                     }
 
@@ -70,7 +70,7 @@ include '../constants/constants.php';
                             mkdir($target_dir.''.$id, 0777, true);
                             mkdir($target_dir.''.$id.'/'.'Extra',0777,true);
                         }   
-                        echo '<br>file Exists : '.file_exists($target_file);
+                        // echo '<br>file Exists : '.file_exists($target_file);
                         if (!file_exists($target_file)) {                          // echo "<br >Sorry, file already exists.";
                            
                             if(move_uploaded_file($_FILES["file"]["tmp_name"],$target_file)) 
@@ -107,7 +107,7 @@ include '../constants/constants.php';
                             if(move_uploaded_file($_FILES["file"]["tmp_name"],$target_file)) 
                             {
                                 $sqlAddImg="update ".$packageTable." set ".$heroimg." = '".substr($target_file,37)."' where ".$packageId." = ".$id.";";
-                                echo '<br><br> 2 : '.$sqlAddImg;
+                                // echo '<br><br> 2 : '.$sqlAddImg;
                                 if (mysqli_query($con, $sqlAddImg)) 
                                 {
                                     echo "<script>";

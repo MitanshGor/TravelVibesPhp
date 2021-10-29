@@ -96,11 +96,11 @@
       <br><br><br>
       <div class="topFooter">
         <div class="titles" onClick="redirectFunction()">
-          <img src="../assets/Images/MainPage/logo.png" class="logo" alt="AirPlane Logo" />
+          <img src="../../assets/Images/MainPage/logo.png" class="logo" alt="AirPlane Logo" />
           <h1>Travel Vibes</h1>
         </div>
         <div class="footer-nav">
-          <li class="nav__item" onClick="redirectFunction()"><a class="nav__link" href="MainPage.php">Home</a></li>
+          <li class="nav__item" onClick="redirectFunction()"><a class="nav__link" style="color:white;">Home</a></li>
           <li class="nav__item"><a class="nav__link" href="../MainPage.php#aboutUs">About Us</a></li>
           <li class="nav__item"><a class="nav__link" href="../UserSection/ViewHotels.php">Hotels</a></li>
           <li class="nav__item"><a class="nav__link" href="../UserSection/ViewPackage.php">Packages</a></li>

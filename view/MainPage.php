@@ -318,7 +318,7 @@ if (session_status() === PHP_SESSION_NONE) {
           <h1>Travel Vibes</h1>
         </div>
         <div class="footer-nav">
-          <li class="nav__item" onClick="redirectFunction()"><a class="nav__link" href="MainPage.php">Home</a></li>
+          <li class="nav__item" onClick="redirectFunction()"><a class="nav__link" style="color:white;">Home</a></li>
           <li class="nav__item"><a class="nav__link" href="MainPage.php#aboutUs">About Us</a></li>
           <li class="nav__item"><a class="nav__link" href="UserSection/ViewHotels.php">Hotels</a></li>
           <li class="nav__item"><a class="nav__link" href="UserSection/ViewPackage.php">Packages</a></li>

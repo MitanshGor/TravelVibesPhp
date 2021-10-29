@@ -53,8 +53,8 @@ include '../constants/constants.php';
                         $target_dir = $_SERVER['DOCUMENT_ROOT']."/WT(indus sem5)/Travel/assets/Images/packageImages/";
                         $target_file = $target_dir.''.$last_id.'/'.basename($_FILES["file"]["name"]);        // getting the multipartfile data from the form
                         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));                 // check the extension weather it is jpg,png 
-                    
-
+                        echo "<br> Target File : ".$target_file;
+                        echo "<br> Targe file data : ".substr($target_file,37);
                         // $uploadOk = 1;  
                         if (!file_exists($target_dir.''.$last_id)) {
                             echo "<br>making directory";
@@ -76,14 +76,14 @@ include '../constants/constants.php';
                                 {
                                     echo "<script>";
                                     echo "alert('DATA and IMAGE Added Sucessfully  !!');";
-                                  echo "window.location.replace('../view/AdminSection/AdminPage.php')"; //Redirects the user with JavaScript
+                                 // echo "window.location.replace('../view/AdminSection/AdminPage.php')"; //Redirects the user with JavaScript
                                     echo "</script>";
                                     die(); //Stops PHP from further execution
                                 }
                                 else{
                                 echo "<script>";
                                 echo "alert('ERROR : Image was unable to save  in DB , please create Hotel again !!');";
-                              echo "window.location.replace('../view/AdminSection/createPackage.php')"; //Redirects the user with JavaScript
+                             // echo "window.location.replace('../view/AdminSection/createPackage.php')"; //Redirects the user with JavaScript
                                 echo "</script>";
                                 die();
                                 }
@@ -91,7 +91,7 @@ include '../constants/constants.php';
                             else{
                                 echo "<script>";
                                 echo "alert('ERROR : Image was unable to save , please create Hotel again !!');";
-                              echo "window.location.replace('../view/AdminSection/createPackage.php')"; //Redirects the user with JavaScript
+                             // echo "window.location.replace('../view/AdminSection/createPackage.php')"; //Redirects the user with JavaScript
                                 echo "</script>";
                                 die();
                             }
@@ -107,14 +107,14 @@ include '../constants/constants.php';
                                 {
                                     echo "<script>";
                                     echo "alert('DATA and Default IMAGE Added Sucessfully !!');";
-                                  echo "window.location.replace('../view/AdminSection/AdminPage.php')"; //Redirects the user with JavaScript
+                                 // echo "window.location.replace('../view/AdminSection/AdminPage.php')"; //Redirects the user with JavaScript
                                     echo "</script>";
                                     die(); //Stops PHP from further execution
                                 }
                                 else{
                                 echo "<script>";
                                 echo "alert('ERROR : Default Image was unable to save  in DB , please create Hotel again !!');";
-                              echo "window.location.replace('../view/AdminSection/createPackage.php')"; //Redirects the user with JavaScript
+                             // echo "window.location.replace('../view/AdminSection/createPackage.php')"; //Redirects the user with JavaScript
                                 echo "</script>";
                                 die();
                                 }                   
@@ -122,7 +122,7 @@ include '../constants/constants.php';
                             else{
                                 echo "<script>";
                                 echo "alert('ERROR : Image was unable to save , please create Hotel again !!');";
-                              echo "window.location.replace('../view/AdminSection/createPackage.php')"; //Redirects the user with JavaScript
+                             // echo "window.location.replace('../view/AdminSection/createPackage.php')"; //Redirects the user with JavaScript
                                  echo "</script>";
                                 die();
                             }
@@ -137,14 +137,14 @@ include '../constants/constants.php';
                                 {
                                     echo "<script>";
                                     echo "alert('DATA added Sucessfully !!');";
-                                  echo "window.location.replace('../view/AdminSection/AdminPage.php')"; //Redirects the user with JavaScript
+                                 // echo "window.location.replace('../view/AdminSection/AdminPage.php')"; //Redirects the user with JavaScript
                                     echo "</script>";
                                     die(); //Stops PHP from further execution
                                 }
                                 else{
                                 echo "<script>";
                                 echo "alert('ERROR : Image was unable to save  in DB , please create Hotel again !!');";
-                              echo "window.location.replace('../view/AdminSection/createPackage.php')"; //Redirects the user with JavaScript
+                             // echo "window.location.replace('../view/AdminSection/createPackage.php')"; //Redirects the user with JavaScript
                                 echo "</script>";
                                 die();
                                 }  
@@ -153,14 +153,14 @@ include '../constants/constants.php';
                                 echo "File is not an image.";
                                 echo "<script>";
                                 echo "alert('ERROR : Invalid Image File !!');";
-                              echo "window.location.replace('../view/AdminSection/createPackage.php')"; //Redirects the user with JavaScript
+                             // echo "window.location.replace('../view/AdminSection/createPackage.php')"; //Redirects the user with JavaScript
                                 echo "</script>";
                             die();
                     }            
 
                     echo "<script>";
                     echo "alert('Data Added Sucessfully !!');";
-                  echo "window.location.replace('../view/AdminSection/AdminPage.php')"; //Redirects the user with JavaScript
+                 // echo "window.location.replace('../view/AdminSection/AdminPage.php')"; //Redirects the user with JavaScript
                     echo "</script>";
                     die(); //Stops PHP from further execution
 
@@ -173,7 +173,7 @@ include '../constants/constants.php';
                         
                     echo "<script>";
                     echo "alert('Please Retry!!');";
-                  echo "window.location.replace('../view/AdminSection/createPackage.php')"; //Redirects the user with JavaScript
+                 // echo "window.location.replace('../view/AdminSection/createPackage.php')"; //Redirects the user with JavaScript
                     echo "</script>";
                     die(); //Stops PHP from further execution
             }

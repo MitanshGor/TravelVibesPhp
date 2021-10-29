@@ -63,9 +63,9 @@
                                    
                                     <input type="number" name="price" placeholder="Price per Room per Night">   
                                     <input type="text" name="type" placeholder="Hotel Type">   
-                                    <input type="number" min="0" max="10" name="maxPeopleInRoom" placeholder="Max People In Room">   
-                                    <input type="number" min="0" max="5" name="roomAvailable" placeholder="Room Available"> 
-                                    <textarea name="features" placeholder="HotelFeatures1 , Hotel Feature2"></textarea> 
+                                    <input type="number" min="0" max="30" name="maxPeopleInRoom" placeholder="Max People In Room">   
+                                    <input type="number" min="0"  name="roomAvailable" placeholder="Room Available"> 
+                                    <textarea minlength="550" name="features" placeholder="HotelFeatures1 , Hotel Feature2"></textarea> 
                             </div>  
                         </div>
                         <div>
@@ -81,11 +81,11 @@
       <br><br><br>
       <div class="topFooter">
         <div class="titles" onClick="redirectFunction()">
-          <img src="../assets/Images/MainPage/logo.png" class="logo" alt="AirPlane Logo" />
+          <img src="../../assets/Images/MainPage/logo.png" class="logo" alt="AirPlane Logo" />
           <h1>Travel Vibes</h1>
         </div>
         <div class="footer-nav">
-          <li class="nav__item" onClick="redirectFunction()"><a class="nav__link" href="MainPage.php">Home</a></li>
+          <li class="nav__item" onClick="redirectFunction()"><a class="nav__link" style="color:white;">Home</a></li>
           <li class="nav__item"><a class="nav__link" href="../MainPage.php#aboutUs">About Us</a></li>
           <li class="nav__item"><a class="nav__link" href="../UserSection/ViewHotels.php">Hotels</a></li>
           <li class="nav__item"><a class="nav__link" href="../UserSection/ViewPackage.php">Packages</a></li>
