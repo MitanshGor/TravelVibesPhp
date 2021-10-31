@@ -16,6 +16,34 @@ also to comnnect the database of phpmyadmin to heroku use the this link for refe
 HEROKU LINK : https://travel-vibes18.herokuapp.com/view/MainPage.php
 
 
+##-----------------------
+----------------------
+##FEATURES : 
+-Login
+-Signup
+-View Hotels and details (NO BOOKING for non-login users and admin)
+-view packages and details (NO BOOKING for non-login users and admin)
+-Contact Us
+
+<br>
+-Single Admin System :
+        - Crud Hotel.
+        -Crud Travel Packages
+        -View Users , Activate Deactivate Users.Delete Users.
+        -View Users Booking History.
+        -Add Extra Caraousal Images for hotels and packages when require.
+<br>
+-Users System :
+        -View Profile
+        -View History of Bookings Done
+        -View List of Hotels and respective hotels details.
+        -View List of Package and respective package details.
+        -Hotel Booking
+        -Package Booking
+-----------------------
+##-----------------------
+
+
 
 ![alt text](https://github.com/MitanshGor/TravelVibesPhp/blob/master/ReadMeImages/FlowChartOfProject.jpg)
 -------------------
