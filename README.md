@@ -20,11 +20,11 @@ HEROKU LINK : https://travel-vibes18.herokuapp.com/view/MainPage.php
 ----------------------
 ## FEATURES : 
 <br>
-*Login
-*Signup
-*View Hotels and details (NO BOOKING for non-login users and admin)
-*view packages and details (NO BOOKING for non-login users and admin)
-*Contact Us
+Login<br>
+Signup<br>
+View Hotels and details (NO BOOKING for non-login users and admin)<br>
+view packages and details (NO BOOKING for non-login users and admin)<br>
+Contact Us<br>
 
 <br>
 * Single Admin System :
