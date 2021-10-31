@@ -16,7 +16,7 @@ also to comnnect the database of phpmyadmin to heroku use the this link for refe
 HEROKU LINK : https://travel-vibes18.herokuapp.com/view/MainPage.php
 
 
-##-----------------------
+-----------------------
 ----------------------
 ##FEATURES : 
 -Login
@@ -41,7 +41,7 @@ HEROKU LINK : https://travel-vibes18.herokuapp.com/view/MainPage.php
         -Hotel Booking
         -Package Booking
 -----------------------
-##-----------------------
+-----------------------
 
 
 
