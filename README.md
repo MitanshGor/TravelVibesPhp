@@ -18,7 +18,8 @@ HEROKU LINK : https://travel-vibes18.herokuapp.com/view/MainPage.php
 
 -----------------------
 ----------------------
-##FEATURES : 
+## FEATURES : 
+<br>
 -Login
 -Signup
 -View Hotels and details (NO BOOKING for non-login users and admin)
