@@ -28,19 +28,19 @@ HEROKU LINK : https://travel-vibes18.herokuapp.com/view/MainPage.php
 
 <br>
 6. Single Admin System :
-  * Crud Hotel.
-  * Crud Travel Packages
-  * View Users , Activate Deactivate Users.Delete Users.
-  * View Users Booking History.
-  * Add Extra Caraousal Images for hotels and packages when require.
+   - Crud Hotel.
+   - Crud Travel Packages
+   - View Users , Activate Deactivate Users.Delete Users.
+   - View Users Booking History.
+   - Add Extra Caraousal Images for hotels and packages when require.
 <br>
 7. Users System :
-   * View Profile
-   * View History of Bookings Done
-   * View List of Hotels and respective hotels details.
-   * View List of Package and respective package details.
-   * Hotel Booking
-   * Package Booking
+   - View Profile
+   - View History of Bookings Done
+   - View List of Hotels and respective hotels details.
+   - View List of Package and respective package details.
+   - Hotel Booking
+   - Package Booking
     <br>
 -----------------------
 -----------------------
