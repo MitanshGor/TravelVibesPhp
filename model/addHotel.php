@@ -72,7 +72,7 @@ include '../constants/constants.php';
                            
                             if(move_uploaded_file($_FILES["file"]["tmp_name"],$target_file)) 
                             {                 
-                                $sqlAddImg="update ".$hotelTable." set ".$heroimg." = '".substr($target_file,37)."' where ".$hotelId." = ".$last_id.";";
+                                $sqlAddImg="update ".$hotelTable." set ".$heroimg." = '".substr($target_file,42)."' where ".$hotelId." = ".$last_id.";";
                               
                                 if (mysqli_query($con, $sqlAddImg)) 
                                 {
@@ -103,7 +103,7 @@ include '../constants/constants.php';
                             unlink($target_file);    // DELETE THE FILE
                             if(move_uploaded_file($_FILES["file"]["tmp_name"],$target_file)) 
                             {
-                                $sqlAddImg="update ".$hotelTable." set ".$heroimg." = '".substr($target_file,37)."' where ".$hotelId." = ".$last_id.";";
+                                $sqlAddImg="update ".$hotelTable." set ".$heroimg." = '".substr($target_file,42)."' where ".$hotelId." = ".$last_id.";";
                                 echo '<br><br> 2 : '.$sqlAddImg;
                                 if (mysqli_query($con, $sqlAddImg)) 
                                 {

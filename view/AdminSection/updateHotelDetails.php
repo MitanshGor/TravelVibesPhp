@@ -77,7 +77,7 @@
                                     <input type="number" name="price" placeholder="Price per Room per Night"  value="<?php echo $row['priceprpn'] ?>">   
                                     <input type="text" name="type" placeholder="Hotel Type"  value="<?php echo $row['Hoteltype'] ?>">   
                                     <input type="number" min="0" max="10" name="maxPeopleInRoom" placeholder="Max People In Room"  value="<?php echo $row['maxPeopleInRoom'] ?>">   
-                                    <input type="number" min="0" max="5" name="roomAvailable" placeholder="Room Available"  value="<?php echo $row['RoomsAvailable'] ?>"> 
+                                    <input type="number" min="0"  name="roomAvailable" placeholder="Room Available"  value="<?php echo $row['RoomsAvailable'] ?>"> 
                                     <textarea name="features" placeholder="HotelFeatures1 , Hotel Feature2"><?php echo $row['Definition'] ?></textarea> 
                             </div>  
                         </div>

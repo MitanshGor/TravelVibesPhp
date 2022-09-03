@@ -109,19 +109,19 @@
                         
                         if(str_starts_with($row[2],"https"))
                         {
-                          echo "      <td style='vertical-align:middle;text-align:center;'><img src='".$row[2]."' style='max-width:200px;' class='img-fluid img-thumbnail'></td>";
+                          echo "      <td style='vertical-align:middle;text-align:center;'><img src='".$row[7]."' style='max-width:200px;' class='img-fluid img-thumbnail'></td>";
                         }
                         else{
-                          echo "      <td style='vertical-align:middle;text-align:center;'><img src='../..".$row[2]."' style='max-width:200px;' class='img-fluid img-thumbnail'></td>";
+                          echo "      <td style='vertical-align:middle;text-align:center;'><img src='../..".$row[7]."' style='max-width:200px;' class='img-fluid img-thumbnail'></td>";
                         }
                         echo "      <td style='vertical-align:middle;text-align:center;'> ".$row[1]."</td>";
-                        echo "      <td style='vertical-align:middle;text-align:center;'>".$row[3]."</td>";
+                        echo "      <td style='vertical-align:middle;text-align:center;'>".$row[2]."</td>";
                         echo "      <td style='vertical-align:middle;text-align:center;'>".$row[4]."</td>";
-                        echo "      <td style='vertical-align:middle;text-align:center;'>".$row[7]."</td>";
                         echo "      <td style='vertical-align:middle;text-align:center;'>".$row[5]."</td>";
-                        echo "      <td style='vertical-align:middle;text-align:center;'>".$row[8]."</td>";
+                        echo "      <td style='vertical-align:middle;text-align:center;'>".$row[6]."</td>";
                         echo "      <td style='vertical-align:middle;text-align:center;'>".$row[9]."</td>";
                         echo "      <td style='vertical-align:middle;text-align:center;'>".$row[10]."</td>";
+                        echo "      <td style='vertical-align:middle;text-align:center;'>".$row[8]."</td>";
                         echo "      <td style='vertical-align:middle;text-align:center;'> 
                                                               <a href='viewPackageDetails.php?packageId=".$row[0]."' class='btn btn-danger my-btn'>View Details</a>  <br>
                                                               <a href='updatePackageDetails.php?packageId=".$row[0]."' class='btn btn-danger my-btn'>Update Details</a>  <br>

@@ -3,7 +3,7 @@
           
             include 'mysqlConnection.php';
             // include '../constants/constants.php';
-            $hotelImageTable="hotelimage";
+            $hotelImageTable="hotelimages";
                     
             $sql = "select * from ".$hotelImageTable." where hotelid=".$_GET['hotelid'].";";
             $conSql=mysqli_query($con,$sql);

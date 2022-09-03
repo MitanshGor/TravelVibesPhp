@@ -77,7 +77,7 @@ if (isset( $_POST['signin'] ) )
 
     
     $sql = "INSERT INTO ".$userTable." (".$userName.", ".$userEmail.", ".$mobileNo." , ".$password.",".$AccCreatedOn.",".$heroimg.")
-    VALUES ('".$name."', '".$email."', '".$mobile."','".$pwd."','".$accCreationDate."' ,'".(($target_file!==NULL)?substr($target_file,37):"/assets/Images/UserProfileImages/profile.png")."')";
+    VALUES ('".$name."', '".$email."', '".$mobile."','".$pwd."','".$accCreationDate."' ,'".(($target_file!==NULL)?substr($target_file,42):"/assets/Images/UserProfileImages/profile.png")."')";
     if (mysqli_query($con, $sql)) {
        
 

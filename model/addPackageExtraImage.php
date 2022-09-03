@@ -87,7 +87,7 @@
 
                         if($target_file!==null)
                         {
-                            $sql="insert into ".$packageimages." (".$packageImgid." , ".$Image.") values (".$Id.",'".substr($target_file,38)."');";
+                            $sql="insert into ".$packageimages." (".$packageImgid." , ".$Image.") values (".$Id.",'".substr($target_file,42)."');";
                             echo "<br>sql Querry = ".$sql;
                             if (mysqli_query($con, $sql)) {
                                 echo "<script>";

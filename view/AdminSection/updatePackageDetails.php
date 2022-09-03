@@ -77,7 +77,7 @@
                                     <input type="text" name="ticketsAvailable" placeholder="Tickets Available" value="<?php echo ''.$row['ticketAvailable'] ?>">    
                                     <input type="date" min="2022-01-01" max="2023-12-31" name="startDate" placeholder="Start Date" value="<?php echo ''.$row['startDate'] ?>">   
                                     <input type="date" name="endDate" placeholder="End Date" value="<?php echo ''.$row['endDate'] ?>"> 
-                                    <textarea name="features" placeholder="HotelFeatures1 , Hotel Feature2" ><?php echo $row['definition'] ?></textarea> 
+                                    <textarea name="features" placeholder="Package Features 1 , Package Feature 2" ><?php echo $row['definition'] ?></textarea> 
                             </div>  
                         </div>
 

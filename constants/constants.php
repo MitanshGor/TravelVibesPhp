@@ -16,7 +16,7 @@
         
                 $billTable="billdata";
                 $hotelTable="hotel";
-                $hotelImages="hotelImage";
+                $hotelImages="hotelImages";
                 $packageTable="package";
                 $packageImages="packageimages";
                 

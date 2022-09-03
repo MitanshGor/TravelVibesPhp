@@ -13,7 +13,7 @@
         if (isset( $_POST['submit']))
         {
                 $Id=$_POST["hotelId"];
-                $hotelimages="hotelimage";
+                $hotelimages="hotelimages";
 
                 $filename = $_FILES["file"]["name"];
                 $tempname = $_FILES["file"]["tmp_name"];
@@ -85,7 +85,7 @@
 
                         if($target_file!==null)
                         {
-                            $sql="insert into ".$hotelimages." (".$hotelImagesId." , ".$Image.") values (".$Id.",'".substr($target_file,38)."');";
+                            $sql="insert into ".$hotelimages." (".$hotelImagesId." , ".$Image.") values (".$Id.",'".substr($target_file,42)."');";
                             echo "<br>sql Querry = ".$sql;
                             if (mysqli_query($con, $sql)) {
                                 echo "<script>";

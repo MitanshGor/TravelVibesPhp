@@ -75,13 +75,13 @@ include '../constants/constants.php';
                            
                             if(move_uploaded_file($_FILES["file"]["tmp_name"],$target_file)) 
                             {                 
-                                $sqlAddImg="update ".$packageTable." set ".$heroimg." = '".substr($target_file,43)."' where ".$packageId." = ".$id.";";
+                                $sqlAddImg="update ".$packageTable." set ".$heroimg." = '".substr($target_file,42)."' where ".$packageId." = ".$id.";";
                                 echo "<br><br> sqlAdd image : ".$sqlAddImg;
                                 if (mysqli_query($con, $sqlAddImg)) 
                                 {
                                     echo "<script>";
                                     echo "alert('DATA and IMAGE Updated Successfully  !!');";
-                                  echo "window.location.replace('../view/AdminSection/viewPackages.php')"; //Redirects the user with JavaScript
+                                    echo "window.location.replace('../view/AdminSection/viewPackages.php')"; //Redirects the user with JavaScript
                                     echo "</script>";
                                     die(); //Stops PHP from further execution
                                 }
@@ -106,7 +106,7 @@ include '../constants/constants.php';
                             unlink($target_file);    // DELETE THE FILE
                             if(move_uploaded_file($_FILES["file"]["tmp_name"],$target_file)) 
                             {
-                                $sqlAddImg="update ".$packageTable." set ".$heroimg." = '".substr($target_file,37)."' where ".$packageId." = ".$id.";";
+                                $sqlAddImg="update ".$packageTable." set ".$heroimg." = '".substr($target_file,42)."' where ".$packageId." = ".$id.";";
                                 // echo '<br><br> 2 : '.$sqlAddImg;
                                 if (mysqli_query($con, $sqlAddImg)) 
                                 {

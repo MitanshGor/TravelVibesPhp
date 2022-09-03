@@ -54,7 +54,7 @@ include '../constants/constants.php';
                         $target_file = $target_dir.''.$last_id.'/'.basename($_FILES["file"]["name"]);        // getting the multipartfile data from the form
                         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));                 // check the extension weather it is jpg,png 
                         echo "<br> Target File : ".$target_file;
-                        echo "<br> Targe file data : ".substr($target_file,37);
+                        echo "<br> Targe file data : ".substr($target_file,42);
                         // $uploadOk = 1;  
                         if (!file_exists($target_dir.''.$last_id)) {
                             echo "<br>making directory";
@@ -70,7 +70,7 @@ include '../constants/constants.php';
                            
                             if(move_uploaded_file($_FILES["file"]["tmp_name"],$target_file)) 
                             {                 
-                                $sqlAddImg="update ".$packageTable." set ".$heroimg." = '".substr($target_file,37)."' where ".$packageId." = ".$last_id.";";
+                                $sqlAddImg="update ".$packageTable." set ".$heroimg." = '".substr($target_file,42)."' where ".$packageId." = ".$last_id.";";
                                 echo "<br><br> sqlAdd image : ".$sqlAddImg;
                                 if (mysqli_query($con, $sqlAddImg)) 
                                 {
@@ -101,7 +101,7 @@ include '../constants/constants.php';
                             unlink($target_file);    // DELETE THE FILE
                             if(move_uploaded_file($_FILES["file"]["tmp_name"],$target_file)) 
                             {
-                                $sqlAddImg="update ".$packageTable." set ".$heroimg." = '".substr($target_file,37)."' where ".$packageId." = ".$last_id.";";
+                                $sqlAddImg="update ".$packageTable." set ".$heroimg." = '".substr($target_file,42)."' where ".$packageId." = ".$last_id.";";
                                 echo '<br><br> 2 : '.$sqlAddImg;
                                 if (mysqli_query($con, $sqlAddImg)) 
                                 {

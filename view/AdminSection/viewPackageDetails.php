@@ -76,7 +76,7 @@
 ?>
         <div class="full-structure">
             <div class="left-heroimg">
-                <img src="<?php echo "../..".$row[2] ?>">
+                <img src="<?php echo "../..".$row[7] ?>">
             </div>
             <div class="right-Data">
                             <div class="detail-heading">

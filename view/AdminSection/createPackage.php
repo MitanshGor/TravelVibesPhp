@@ -63,7 +63,7 @@
                                     <input type="text" name="ticketsAvailable" placeholder="Tickets Available">   
                                     <input type="date" min="2022-01-01" max="2023-12-31" name="startDate" placeholder="Start Date">   
                                     <input type="date" name="endDate" placeholder="End Date"> 
-                                    <textarea name="features" placeholder="HotelFeatures1 , Hotel Feature2"></textarea> 
+                                    <textarea name="features" placeholder="Package Feature 1 , Package Feature 2"></textarea> 
                             </div>  
                         </div>
                         <div>

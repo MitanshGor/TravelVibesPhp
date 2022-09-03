@@ -361,12 +361,15 @@ input:not([type="submit"]):focus
 }
 
 .extra-Images .photos {
-    padding-bottom: 20px
+    padding-bottom: 20px;
+    z-index: -500;
 }
 
 .extra-Images .item {
-    padding-bottom: 30px
+    padding-bottom: 30px;
+    z-index: -5200;
 }
+
 
 /*                                                      FOOTER                                                     */
 
