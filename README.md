@@ -1,3 +1,19 @@
+## How to run?
+
+Install xamp.
+
+Inside htdocs folder create folder name = "WT(indus sem5)"
+
+Inside "travelvibes" folder open cmd and paste the code.
+
+`` git pull https://github.com/MitanshGor/TravelVibesPhp.git ``
+
+
+Open xamp control pannel and start Apache.
+
+Now run `` http://localhost/WT(indus%20sem5)/travelvibes/view/AdminSection/viewUserDetail.php ``
+
+
 # TravelVibesPHP
 -----------
 

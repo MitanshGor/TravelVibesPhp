@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body{
+            margin-top: 100px;
+            width: 70vw;
+            height: 60vh;
+            border: 10px solid black;
+            padding: 20px;
+        }
+        input{
+            width: inherit;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <input type="text" id="armstrong" >
+    <button onclick="armstrongFunc()">Find Armstrong </button>
+    <br><span id="armstrongAns"></span>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <input type="text" id="pelindrom" >
+    <button onclick="pelindromFunc()">Find Pelindorm</button>
+    <br><span id="PelindromAns"></span>
+
+    
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <input type="text" id="sum" >
+    <button onclick="sumFunc()">Find Sum</button>
+    <br>
+    <span id="sumAns"></span>
+
+</body>
+
+<script>
+        function armstrongFunc()
+        {
+            a = document.getElementById("armstrong").value;
+            var ans =0;
+            for(var c of a){
+                
+                ans = ans + parseInt(c)*parseInt(c)*parseInt(c);
+                console.log(ans);
+            }  
+            if(ans===parseInt(a)){
+                document.getElementById("armstrongAns").innerHTML="Yes it is armstrong";
+            } 
+            else{
+                document.getElementById("armstrongAns").innerHTML="Yes it is NOT  armstrong";
+            }
+
+        }
+
+        function  pelindromFunc()
+        {
+            a = document.getElementById("pelindrom").value;
+            var ans = a.split("").reverse().join("");
+            if(a===ans)
+            {
+                document.getElementById("PelindromAns").innerHTML="Yes it is Pelindrom";
+            }
+            else{
+                document.getElementById("PelindromAns").innerHTML="Yes it is NOT Pelindrom";
+            }
+        }
+        function sumFunc()
+        {
+            a = document.getElementById("sum").value;
+            var ans =0;
+            for(var c of a){
+                ans = ans + parseInt(c);
+            }  
+            document.getElementById("sumAns").innerHTML="Sum is : "+ans;
+        }
+            
+
+</script>
+</html>

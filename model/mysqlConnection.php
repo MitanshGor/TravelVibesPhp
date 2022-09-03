@@ -12,8 +12,8 @@
 
 
 // $con = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
-// $con=mysqli_connect("localhost","root","root","travelvibes"); 
-$con=mysqli_connect("us-cdbr-east-04.cleardb.com","b2173ddf4f8089","ccaf2362","heroku_b981d50df0ab52e"); 
+$con=mysqli_connect("localhost","root","root","travelvibes"); 
+// $con=mysqli_connect("us-cdbr-east-04.cleardb.com","b2173ddf4f8089","ccaf2362","heroku_b981d50df0ab52e"); 
 
 // Check connection
 if (mysqli_connect_errno())

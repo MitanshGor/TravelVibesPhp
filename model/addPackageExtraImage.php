@@ -39,7 +39,7 @@
                     
                     if($check !== false && $Catch===false) 
                     {
-                        $target_dir = $_SERVER['DOCUMENT_ROOT']."/WT(indus sem5)/travel/assets/Images/packageImages/";
+                        $target_dir = $_SERVER['DOCUMENT_ROOT']."/WT(indus sem5)/travelvibes/assets/Images/packageImages/";
                         $uploadOk = 0;
                         $target_file = $target_dir.''.$Id.'/Extra/'.basename($_FILES["file"]["name"]);              // getting the multipartfile data from the form
                         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));                 // check the extension weather it is jpg,png 

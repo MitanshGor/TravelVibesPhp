@@ -50,7 +50,7 @@ include '../constants/constants.php';
 
                     if($check !== false && $Catch===false)          // image is adde by the user and we have to add it into the DB
                     {
-                        $target_dir = $_SERVER['DOCUMENT_ROOT']."/WT(indus sem5)/Travel/assets/Images/packageImages/";
+                        $target_dir = $_SERVER['DOCUMENT_ROOT']."/WT(indus sem5)/travelvibes/assets/Images/packageImages/";
                         $target_file = $target_dir.''.$last_id.'/'.basename($_FILES["file"]["name"]);        // getting the multipartfile data from the form
                         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));                 // check the extension weather it is jpg,png 
                         echo "<br> Target File : ".$target_file;
