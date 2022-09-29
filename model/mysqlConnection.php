@@ -25,9 +25,9 @@ if (mysqli_connect_errno())
 }
 ?>  -->
 
+<!-- 
 
-
-<?php
+< ? php
   // PHP Data Objects(PDO) Sample Code:
   try {
       $conn = new PDO("sqlsrv:server = tcp:travelvibes.database.windows.net,1433; Database = travelvibes", "Indus_CC_travel", "mitansh@2002");
@@ -42,4 +42,11 @@ if (mysqli_connect_errno())
   $connectionInfo = array("UID" => "Indus_CC_travel", "pwd" => "mitansh@2002", "Database" => "travelvibes", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
   $serverName = "tcp:travelvibes.database.windows.net,1433";
   $con = sqlsrv_connect($serverName, $connectionInfo);
-?>
+?> -->
+
+<?php
+    $con=mysqli_init(); 
+    mysqli_ssl_set($con, NULL, NULL, "tcp:travelvibes.database.windows.net" , NULL, NULL); 
+    $con=mysqli_real_connect($con, "travelvibe.mysql.database.azure.com", "Indus_CC_travel@travelvibe", "Mitansh@2002","travelvibes", 3306);
+    
+  ?>
