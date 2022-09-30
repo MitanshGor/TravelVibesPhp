@@ -106,7 +106,7 @@ if (isset( $_POST['signin'] ) )
     if (mysqli_query($con, $sql)) {
        
         echo "<br>line 108";
-        header('Location: ' .'../view/MainPage.php', true, $permanent ? 301 : 302);
+        header('Location: ' .'../view/MainPage.php');
         exit();
         // echo "< script>";
         // // echo "alert('Data Added Sucessfully !!');";
