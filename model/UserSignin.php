@@ -48,10 +48,12 @@ if (isset( $_POST['signin'] ) )
             // echo "<br >Sorry, file already exists.";
             unlink($target_file);    // DELETE THE FILE
             if(move_uploaded_file($_FILES["file"]["tmp_name"],$target_file)) {                 
-                // echo "< br > Your File Updated Successfully Uploaded < br >";
+                echo "< br > Your File Updated Successfully Uploaded < br >";
                 
             echo "<br>line 52";
-            }
+            header('Location: ' .'../view/signin.php', true, $permanent ? 301 : 302);
+            exit();   
+        }
             else{
                 
                  echo "<br>line 57";
