@@ -10,16 +10,22 @@ if (isset( $_POST['signin'] ) )
     $mobile = $_POST['mobile'];
     $accCreationDate=date("Y-m-d h:i:sa");
  
+    echo "<br>line 13";
+
  
 
     $target_file=null;
     $Catch=false;
          if(isset($_FILES["file"]["tmp_name"])==1){
-            $check = getimagesize($_FILES["file"]["tmp_name"]);                                     
+            $check = getimagesize($_FILES["file"]["tmp_name"]);   
+            echo "<br>line 21";
+                                  
         }
         else{
             $catch=true;
             $Catch=true;
+            echo "<br>line 27";
+
         }
    
     if($check !== false && $Catch===false) 
@@ -29,10 +35,13 @@ if (isset( $_POST['signin'] ) )
         $target_file = $target_dir.''.$name.'/'.basename($_FILES["file"]["name"]);              // getting the multipartfile data from the form
         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));                 // check the extension weather it is jpg,png 
        
+        echo "<br>line 31";
         $uploadOk = 1;  
         if (!file_exists($target_dir.''.$name)) {
             echo "<br>making directory";
             mkdir($target_dir.''.$name, 0777, true);
+            
+            echo "<br>line 44";
         }   
 
         if (file_exists($target_file)) {
@@ -40,8 +49,12 @@ if (isset( $_POST['signin'] ) )
             unlink($target_file);    // DELETE THE FILE
             if(move_uploaded_file($_FILES["file"]["tmp_name"],$target_file)) {                 
                 // echo "< br > Your File Updated Successfully Uploaded < br >";
+                
+            echo "<br>line 52";
             }
             else{
+                
+                 echo "<br>line 57";
                 header('Location: ' .'../view/signin.php', true, $permanent ? 301 : 302);
                 exit();
                 // echo "< script>";
@@ -56,6 +69,8 @@ if (isset( $_POST['signin'] ) )
              if(move_uploaded_file($_FILES["file"]["tmp_name"],$target_file)) {                 
             }
             else{
+                
+                echo "<br>line 73";
                 header('Location: ' .'../view/signin.php', true, $permanent ? 301 : 302);
                 exit();
                 // echo "<>";
@@ -69,6 +84,8 @@ if (isset( $_POST['signin'] ) )
       } 
       else if($Catch==true){}
       else {
+        
+        echo "<br>line 88";
         echo "File is not an image.";
         $uploadOk = 0;
         header('Location: ' .'../view/signin.php', true, $permanent ? 301 : 302);
@@ -85,6 +102,7 @@ if (isset( $_POST['signin'] ) )
     VALUES ('".$name."', '".$email."', '".$mobile."','".$pwd."','".$accCreationDate."' ,'".(($target_file!==NULL)?substr($target_file,43):"/assets/Images/UserProfileImages/profile.png")."')";
     if (mysqli_query($con, $sql)) {
        
+        echo "<br>line 105";
         header('Location: ' .'../view/MainPage.php', true, $permanent ? 301 : 302);
         exit();
         // echo "< script>";
@@ -94,6 +112,8 @@ if (isset( $_POST['signin'] ) )
         // die(); //Stops PHP from further execution
     
     } else {
+        echo "<br>line 115";
+
         header('Location: ' .'../view/signin.php', true, $permanent ? 301 : 302);
         exit();
         // echo "<>";
