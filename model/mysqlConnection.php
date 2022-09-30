@@ -44,7 +44,7 @@ if (mysqli_connect_errno())
   $con = sqlsrv_connect($serverName, $connectionInfo);
 ?> -->
 
-<?php
+< ?php
     $con=mysqli_init(); 
     mysqli_ssl_set($con, NULL, NULL, "tcp:travelvibes.database.windows.net" , NULL, NULL); 
     $con=mysqli_real_connect($con, "travelvibe.mysql.database.azure.com", "Indus_CC_travel@travelvibe", "Mitansh@2002","travelvibes", 3306);

@@ -51,7 +51,7 @@ if (isset( $_POST['signin'] ) )
                 echo "< br > Your File Updated Successfully Uploaded < br >";
                 
             echo "<br>line 52";
-            header('Location: ' .'../view/signin.php', true, $permanent ? 301 : 302);
+            header('Location: ' .'../view/signin.php', true);
             exit();   
         }
             else{
