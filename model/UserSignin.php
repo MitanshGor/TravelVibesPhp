@@ -116,15 +116,17 @@ if (isset( $_POST['signin'] ) )
     
     } else {
         echo "<br>line 115";
-
         echo "Please Retry !!";
-        header('Location: ' .'../view/signin.php', true);
-        exit();
+        
+        // header('Location: ' .'../view/signin.php', true);
+        // exit();
         // echo "<>";
         // echo "window.location.replace('../view/signin.php')"; //Redirects the user with JavaScript
         // echo "</ script>";
         // die(); //Stops PHP from further execution
     }
+    echo "<br>line 128";
+    echo "Please Retry !!";
 }
 else{
     echo '<h1><center>401 PAGE IS UNAUTHORIZED<center><h1>';
