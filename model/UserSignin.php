@@ -103,30 +103,31 @@ if (isset( $_POST['signin'] ) )
     $sql = "INSERT INTO ".$userTable." (".$userName.", ".$userEmail.", ".$mobileNo." , ".$password.",".$AccCreatedOn.",".$heroimg.")
     VALUES ('".$name."', '".$email."', '".$mobile."','".$pwd."','".$accCreationDate."' ,'".(($target_file!==NULL)?substr($target_file,43):"/assets/Images/UserProfileImages/profile.png")."')";
     echo "<br>line 105";
-    if (mysqli_query($con, $sql)) {
+    // if (mysqli_query($con, $sql)) 
+    // {
        
         echo "<br>line 108";
         header('Location: ' .'../view/MainPage.php');
-        exit();
+        // exit();
         // echo "< script>";
         // // echo "alert('Data Added Sucessfully !!');";
         // echo "window.location.replace('../view/MainPage.php')"; //Redirects the user with JavaScript
         // echo "</>";
         // die(); //Stops PHP from further execution
     
-    } else {
-        echo "<br>line 115";
-        echo "Please Retry !!";
+    // } else {
+    //     echo "<br>line 115";
+    //     echo "Please Retry !!";
         
-        // header('Location: ' .'../view/signin.php', true);
-        // exit();
-        // echo "<>";
-        // echo "window.location.replace('../view/signin.php')"; //Redirects the user with JavaScript
-        // echo "</ script>";
-        // die(); //Stops PHP from further execution
-    }
-    echo "<br>line 128";
-    echo "Please Retry !!";
+    //     // header('Location: ' .'../view/signin.php', true);
+    //     // exit();
+    //     // echo "<>";
+    //     // echo "window.location.replace('../view/signin.php')"; //Redirects the user with JavaScript
+    //     // echo "</ script>";
+    //     // die(); //Stops PHP from further execution
+    // }
+    // echo "<br>line 128";
+    // echo "Please Retry !!";
 }
 else{
     echo '<h1><center>401 PAGE IS UNAUTHORIZED<center><h1>';
