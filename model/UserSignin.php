@@ -48,11 +48,11 @@ if (isset( $_POST['signin'] ) )
             // echo "<br >Sorry, file already exists.";
             unlink($target_file);    // DELETE THE FILE
             if(move_uploaded_file($_FILES["file"]["tmp_name"],$target_file)) {                 
-                echo "< br > Your File Updated Successfully Uploaded < br >";
+                echo "<br> Your File Updated Successfully Uploaded <br>";
                 
             echo "<br>line 52";
-            header('Location: ' .'../view/signin.php', true);
-            exit();   
+            // header('Location: ' .'../view/signin.php', true);
+            // exit();   
         }
             else{
                 
@@ -102,9 +102,10 @@ if (isset( $_POST['signin'] ) )
     
     $sql = "INSERT INTO ".$userTable." (".$userName.", ".$userEmail.", ".$mobileNo." , ".$password.",".$AccCreatedOn.",".$heroimg.")
     VALUES ('".$name."', '".$email."', '".$mobile."','".$pwd."','".$accCreationDate."' ,'".(($target_file!==NULL)?substr($target_file,43):"/assets/Images/UserProfileImages/profile.png")."')";
+    echo "<br>line 105";
     if (mysqli_query($con, $sql)) {
        
-        echo "<br>line 105";
+        echo "<br>line 108";
         header('Location: ' .'../view/MainPage.php', true, $permanent ? 301 : 302);
         exit();
         // echo "< script>";
