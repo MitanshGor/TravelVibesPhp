@@ -117,10 +117,10 @@ if (isset( $_POST['signin'] ) )
     } else {
         echo "<br>line 115";
 
-        header('Location: ' .'../view/signin.php', true, $permanent ? 301 : 302);
+        echo "Please Retry !!";
+        header('Location: ' .'../view/signin.php', true);
         exit();
         // echo "<>";
-        // // echo "alert('Please Retry !!');";
         // echo "window.location.replace('../view/signin.php')"; //Redirects the user with JavaScript
         // echo "</ script>";
         // die(); //Stops PHP from further execution
