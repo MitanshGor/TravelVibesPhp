@@ -42,11 +42,13 @@ if (isset( $_POST['signin'] ) )
                 // echo "< br > Your File Updated Successfully Uploaded < br >";
             }
             else{
-                echo "<script>";
-                echo "alert('ERROR : Image was unable to save , please signin again !!');";
-                echo "window.location.replace('../view/signin.php')"; //Redirects the user with JavaScript
-                echo "</script>";
-                die();
+                header('Location: ' .'../view/signin.php', true, $permanent ? 301 : 302);
+                exit();
+                // echo "< script>";
+                // // echo "alert('ERROR : Image was unable to save , please signin again !!');";
+                // echo "window.location.replace('../view/signin.php')"; //Redirects the user with JavaScript
+                // echo "</>";
+                // die();
             }
         }
         else
@@ -54,10 +56,12 @@ if (isset( $_POST['signin'] ) )
              if(move_uploaded_file($_FILES["file"]["tmp_name"],$target_file)) {                 
             }
             else{
-                echo "<script>";
-                echo "alert('ERROR : Image was unable to save , please signin again !!');";
-                echo "window.location.replace('../view/signin.php')"; //Redirects the user with JavaScript
-                echo "</script>";
+                header('Location: ' .'../view/signin.php', true, $permanent ? 301 : 302);
+                exit();
+                // echo "<>";
+                // // echo "alert('ERROR : Image was unable to save , please signin again !!');";
+                // echo "window.location.replace('../view/signin.php')"; //Redirects the user with JavaScript
+                // echo "</ script>";
                 die();
             }
         }
@@ -67,12 +71,13 @@ if (isset( $_POST['signin'] ) )
       else {
         echo "File is not an image.";
         $uploadOk = 0;
-
-        echo "<script>";
-        echo "alert('ERROR : Invalid Image File !!');";
-        echo "window.location.replace('../view/signin.php')"; //Redirects the user with JavaScript
-        echo "</script>";
-        die();
+        header('Location: ' .'../view/signin.php', true, $permanent ? 301 : 302);
+        exit();
+        // echo "< script>";
+        // // echo "alert('ERROR : Invalid Image File !!');";
+        // echo "window.location.replace('../view/signin.php')"; //Redirects the user with JavaScript
+        // echo "</>";
+        // die();
       }
 
     
@@ -80,20 +85,22 @@ if (isset( $_POST['signin'] ) )
     VALUES ('".$name."', '".$email."', '".$mobile."','".$pwd."','".$accCreationDate."' ,'".(($target_file!==NULL)?substr($target_file,43):"/assets/Images/UserProfileImages/profile.png")."')";
     if (mysqli_query($con, $sql)) {
        
-
-        echo "<script>";
-        echo "alert('Data Added Sucessfully !!');";
-        echo "window.location.replace('../view/MainPage.php')"; //Redirects the user with JavaScript
-        echo "</script>";
-        die(); //Stops PHP from further execution
+        header('Location: ' .'../view/MainPage.php', true, $permanent ? 301 : 302);
+        exit();
+        // echo "< script>";
+        // // echo "alert('Data Added Sucessfully !!');";
+        // echo "window.location.replace('../view/MainPage.php')"; //Redirects the user with JavaScript
+        // echo "</>";
+        // die(); //Stops PHP from further execution
     
     } else {
-     
-        echo "<script>";
-        echo "alert('Please Retry !!');";
-        echo "window.location.replace('../view/signin.php')"; //Redirects the user with JavaScript
-        echo "</script>";
-        die(); //Stops PHP from further execution
+        header('Location: ' .'../view/signin.php', true, $permanent ? 301 : 302);
+        exit();
+        // echo "<>";
+        // // echo "alert('Please Retry !!');";
+        // echo "window.location.replace('../view/signin.php')"; //Redirects the user with JavaScript
+        // echo "</ script>";
+        // die(); //Stops PHP from further execution
     }
 }
 else{

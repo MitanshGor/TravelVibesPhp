@@ -16,8 +16,13 @@
             session_start();
             $_SESSION["sessionId"]=session_id();
             $_SESSION["userType"]="admin";
-            echo "<script>alert('ADMIN Login is Successfull !!');";
-            echo "window.location.replace('../view/MainPage.php')</script>"; //Redirects the user with JavaScript
+            
+
+            header('Location: ' . '../view/MainPage.php', true, $permanent ? 301 : 302);
+            exit();
+            // Redirect('https://example.com/', false);
+            // echo "<script>alert('ADMIN Login is Successfull !!');";
+            // echo "window.location.replace('../view/MainPage.php')</script>"; //Redirects the user with JavaScript
             die();
         }
 
@@ -37,18 +42,22 @@
                     $_SESSION["sessionId"]=session_id();
                     $_SESSION["userType"]="user";
 
-                    echo "<script>";
-                    echo "alert('".$_SESSION['userName']." Login is Successfull !!');";
-                    echo "window.location.replace('../view/MainPage.php')"; //Redirects the user with JavaScript
-                    echo "</script>";
-                    die();
+                    header('Location: ' .'../view/MainPage.php', true, $permanent ? 301 : 302);
+                    exit();
+                    // echo "< script>";
+                    // // echo "alert('".$_SESSION['userName']." Login is Successfull !!');";
+                    // echo "window.location.replace('../view/MainPage.php')"; //Redirects the user with JavaScript
+                    // echo "</>";
+                    // die();
             }
         }
-                    echo "<script>";
-                    echo "alert('Invalid Credentials Please Try Again !!');";
-                    echo "window.location.replace('../view/login.php')"; //Redirects the user with JavaScript
-                    echo "</script>";
-                    die();
+                header('Location: ' .'../view/login.php', true, $permanent ? 301 : 302);
+                exit();
+                    // echo "< script>";
+                    // // echo "alert('Invalid Credentials Please Try Again !!');";
+                    // echo "window.location.replace('../view/login.php')"; //Redirects the user with JavaScript
+                    // echo "</>";
+                    // die();
     }
     else{
         echo '<h1><center>401 PAGE IS UNAUTHORIZED<center><h1>';

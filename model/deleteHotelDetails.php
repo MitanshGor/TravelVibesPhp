@@ -11,19 +11,23 @@
 
     if (mysqli_query($con,$sql)) {
 
-                echo "<script>";
-                echo "alert('Hotel deleted !!');";
-                echo "window.location.replace('../view/AdminSection/viewHotels.php')"; //Redirects the user with JavaScript
-                echo "</script>";
+                header('Location: ' .'../view/AdminSection/viewHotels.php', true, $permanent ? 301 : 302);
+                exit();  
+                // echo "< script>";
+                // // echo "alert('Hotel deleted !!');";
+                // echo "window.location.replace('../view/AdminSection/viewHotels.php')"; //Redirects the user with JavaScript
+                // echo "</>";
                     
         }
         else {
             
+            header('Location: ' .'../view/AdminSection/viewHotels.php', true, $permanent ? 301 : 302);
+            exit();  
             
-            echo "<script>";
-            echo "alert('Hotel unable to delete !!');";
-            echo "window.location.replace('../view/AdminSection/viewHotels.php')"; //Redirects the user with JavaScript
-            echo "</script>";
+            // echo "< script>";
+            // // echo "alert('Hotel unable to delete !!');";
+            // echo "window.location.replace('../view/AdminSection/viewHotels.php')"; //Redirects the user with JavaScript
+            // echo "</>";
 
 
         }  

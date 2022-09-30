@@ -1,4 +1,4 @@
-<!-- < ?php
+ <?php
 // Create connection
 
 //Get Heroku ClearDB connection information
@@ -23,7 +23,7 @@ if (mysqli_connect_errno())
   else{
     // echo "<h2>MYSQL TravelVibes Database Connected !!!</h2>";
 }
-?>  -->
+?>  
 
 <!-- 
 
@@ -44,9 +44,12 @@ if (mysqli_connect_errno())
   $con = sqlsrv_connect($serverName, $connectionInfo);
 ?> -->
 
-<?php
+
+
+<!-- FINAL FOR AZURE -->
+<!-- < ? php
     $con=mysqli_init(); 
     mysqli_ssl_set($con, NULL, NULL, "tcp:travelvibes.database.windows.net" , NULL, NULL); 
     $con=mysqli_real_connect($con, "travelvibe.mysql.database.azure.com", "Indus_CC_travel@travelvibe", "Mitansh@2002","travelvibes", 3306);
     
-  ?>
+  ?> -->

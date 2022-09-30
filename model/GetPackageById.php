@@ -18,11 +18,15 @@
 
             //$exeQuery = mysqli_query($queryContents);
             if(mysqli_num_rows($conSql)<0){
-                echo "<script>";
-                echo "alert('Package Not Available !!');";
-                echo "window.location.replace('../AdminSection/viewPackages.php')"; //Redirects the user with JavaScript
-                echo "</script>";
-                die();
+                
+                header('Location: ' .'../AdminSection/viewPackages.php', true, $permanent ? 301 : 302);
+                exit();
+                
+                // echo "<script>";
+                // // echo "alert('Package Not Available !!');";
+                // echo "window.location.replace('../AdminSection/viewPackages.php')"; //Redirects the user with JavaScript
+                // echo "</script>";
+                // die();
             }
 
 

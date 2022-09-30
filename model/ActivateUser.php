@@ -10,18 +10,25 @@
 
     //$exeQuery = mysqli_query($queryContents);
     if(!$conSql){
-        echo "<script>";
-        echo "alert('No Hotels Available !!');";
-        echo "window.location.replace('../AdminSection/viewHotelDetails.php')"; //Redirects the user with JavaScript
-        echo "</script>";
-        die();
+
+        header('Location: ' . '../AdminSection/viewHotelDetails.php', true, $permanent ? 301 : 302);
+            exit();
+        
+        // echo "< script>";
+        // // echo "alert('No Hotels Available !!');";
+        // echo "window.location.replace('../AdminSection/viewHotelDetails.php')"; //Redirects the user with JavaScript
+        // echo "</>";
+        // die();
     }
     else{
-        echo "<script>";
-        // echo "alert('No Hotels Available !!');";
-        echo "window.location.replace('../view/AdminSection/viewUserDetail.php')"; //Redirects the user with JavaScript
-        echo "</script>";
-        die();
+        header('Location: ' . '../view/AdminSection/viewUserDetail.php', true, $permanent ? 301 : 302);
+        exit();
+        
+        // echo "<>";
+        // // // echo "alert('No Hotels Available !!');";
+        // echo "window.location.replace('../view/AdminSection/viewUserDetail.php')"; //Redirects the user with JavaScript
+        // echo "</ script>";
+        // die();
     
     }
     
