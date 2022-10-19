@@ -57,7 +57,7 @@
             </div>
             <div class="nav2">
                 <li class="nav__item"><a class="nav__link" href="viewUserDetail.php"><i class="fas fa-user  My-faEdit"></i>Users</a></li>
-                <li class="nav__item"><a class="nav__link" href="review.php"><i class="fas fa-search  My-faEdit"></i>Reviews</a></li>
+                <!-- <li class="nav__item"><a class="nav__link" href="review.php"><i class="fas fa-search  My-faEdit"></i>Reviews</a></li> -->
             </div>
         </div>
       </div>
@@ -147,7 +147,7 @@
                                   <?php
                                     while ($row = mysqli_fetch_array($conSql)){
                                   ?>
-                                      <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="" data-lightbox="photos"><img class="img-fluid" src="../../<?php echo ''.$row['Image'] ?>"></a></div>
+                                      <div class="col-sm-6 col-md-4 col-lg-3 item" style="z-index: 1;"><a href="" data-lightbox="photos"><img class="img-fluid" src="../../<?php echo ''.$row['Image'] ?>"></a></div>
                                     <?php
                                         }
                                     ?>

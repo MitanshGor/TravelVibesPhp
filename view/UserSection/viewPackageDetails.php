@@ -172,7 +172,7 @@
 ?>
         <div class="full-structure">
             <div class="left-heroimg">
-                <img src="<?php echo "../..".$row[2] ?>">
+                <img src="<?php echo "../..".$row[7] ?>">
             </div>
             <div class="right-Data">
                             <div class="detail-heading">
@@ -186,7 +186,7 @@
                         <div class="left-up-info">
                             State : <?php echo "".$row['state']?><br>
                             Ticket Price : <?php echo "".$row['price']?> Rs<br>
-                            Transport :  <?php echo "".$row[5]?><br>
+                            Transport :  <?php echo "".$row[6]?><br>
                         </div>
                         <div class="right-up-info">
                             Creation Date : <?php echo "".$row['packageCreationDT']?>

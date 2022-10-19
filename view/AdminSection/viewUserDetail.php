@@ -57,7 +57,7 @@
             </div>
             <div class="nav2">
                 <li class="nav__item"><a class="nav__link" href="viewUserDetail.php"><i class="fas fa-user  My-faEdit"></i>Users</a></li>
-                <li class="nav__item"><a class="nav__link" href="review.php"><i class="fas fa-search  My-faEdit"></i>Reviews</a></li>
+                <!-- <li class="nav__item"><a class="nav__link" href="review.php"><i class="fas fa-search  My-faEdit"></i>Reviews</a></li> -->
             </div>
         </div>
       </div>
@@ -110,7 +110,7 @@
                           echo "      <td style='vertical-align:middle;text-align:center;'><img src='".$row[7]."' style='max-width:200px;' class='img-fluid img-thumbnail'></td>";
                         }
                         else{
-                          echo "      <td style='vertical-align:middle;text-align:center;'><img src='../..".$row[7]."' style='max-width:200px;' class='img-fluid img-thumbnail'></td>";
+                          echo "      <td style='vertical-align:middle;text-align:center;'><img src='../../".$row[7]."' style='max-width:200px;' class='img-fluid img-thumbnail'></td>";
                         }
                         echo "      <td style='vertical-align:middle;text-align:center;'> ".$row[1]."</td>";
                         echo "      <td style='vertical-align:middle;text-align:center;'> ".$row[2]." </td>";

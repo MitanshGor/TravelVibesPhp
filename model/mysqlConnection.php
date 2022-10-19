@@ -18,10 +18,8 @@ $con=mysqli_connect("localhost","root","root","travelvibes");
 // Check connection
 if (mysqli_connect_errno())
   {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
   }
   else{
-    // echo "<h2>MYSQL TravelVibes Database Connected !!!</h2>";
 }
 ?>  -->
 
@@ -31,7 +29,7 @@ if (mysqli_connect_errno())
   // PHP Data Objects(PDO) Sample Code:
   try {
       $conn = new PDO("sqlsrv:server = tcp:travelvibes.database.windows.net,1433; Database = travelvibes", "Indus_CC_travel", "mitansh@2002");
-      $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+      $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);ch
   }
   catch (PDOException $e) {
       print("Error connecting to SQL Server.");
@@ -44,9 +42,24 @@ if (mysqli_connect_errno())
   $con = sqlsrv_connect($serverName, $connectionInfo);
 ?> -->
 
-<?php
+<!-- < ?php
     $con=mysqli_init(); 
     mysqli_ssl_set($con, NULL, NULL, "tcp:travelvibes.database.windows.net" , NULL, NULL); 
     $con=mysqli_real_connect($con, "travelvibe.mysql.database.azure.com", "Indus_CC_travel@travelvibe", "Mitansh@2002","travelvibes", 3306);
     
-  ?>
+  ? > -->
+
+
+  <?php
+// Create connection
+$con=mysqli_connect("localhost","root","root","travelvibes"); 
+
+// Check connection
+if (mysqli_connect_errno())
+  {
+  // echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
+  else{
+    // echo "<h2>MYSQL TravelVibes Database Connected !!!</h2>";
+}
+?> 

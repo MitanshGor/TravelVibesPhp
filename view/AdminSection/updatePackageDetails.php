@@ -71,7 +71,7 @@
                                 <input type="file" name="file" placeholder="File"  accept=" image/png, image/jpg, image/jpeg">
                                 <input type="text" name="state" placeholder="State" value="<?php echo ''.$row['state'] ?>">
                                 <input type="text" name="price" placeholder="Ticket Price per person" value="<?php echo ''.$row['price'] ?>" >
-                                <input type="text" name="modeOfTransport" placeholder="Mode of Transport" value="<?php echo ''.$row[5] ?>" >
+                                <input type="text" name="modeOfTransport" placeholder="Mode of Transport" value="<?php echo ''.$row[6] ?>" >
                           </div>
                               <div>                                   
                                     <input type="text" name="ticketsAvailable" placeholder="Tickets Available" value="<?php echo ''.$row['ticketAvailable'] ?>">    

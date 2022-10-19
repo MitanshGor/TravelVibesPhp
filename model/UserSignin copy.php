@@ -36,19 +36,17 @@ if (isset( $_POST['signin'] ) )
         }   
 
         if (file_exists($target_file)) {
-            // echo "<br >Sorry, file already exists.";
             unlink($target_file);    // DELETE THE FILE
             if(move_uploaded_file($_FILES["file"]["tmp_name"],$target_file)) {                 
-                // echo "< br > Your File Updated Successfully Uploaded < br >";
             }
             else{
-                header('Location: ' .'../view/signin.php', true, $permanent ? 301 : 302);
-                exit();
-                // echo "< script>";
-                // // echo "alert('ERROR : Image was unable to save , please signin again !!');";
-                // echo "window.location.replace('../view/signin.php')"; //Redirects the user with JavaScript
-                // echo "</>";
-                // die();
+                // header('Location: ' .'../view/signin.php', true, $permanent ? 301 : 302);
+                // exit();
+                echo "<script>";
+                echo "alert('ERROR : Image was unable to save , please signin again !!');";
+                echo "window.location.replace('../view/signin.php')"; //Redirects the user with JavaScript
+                echo "</script>";
+                die();
             }
         }
         else
@@ -56,12 +54,12 @@ if (isset( $_POST['signin'] ) )
              if(move_uploaded_file($_FILES["file"]["tmp_name"],$target_file)) {                 
             }
             else{
-                header('Location: ' .'../view/signin.php', true, $permanent ? 301 : 302);
-                exit();
-                // echo "< script>";
-                // // echo "alert('ERROR : Image was unable to save , please signin again !!');";
-                // echo "window.location.replace('../view/signin.php')"; //Redirects the user with JavaScript
-                // echo "< /script>";
+                // header('Location: ' .'../view/signin.php', true, $permanent ? 301 : 302);
+                // exit();
+                echo "<script>";
+                echo "alert('ERROR : Image was unable to save , please signin again !!');";
+                echo "window.location.replace('../view/signin.php')"; //Redirects the user with JavaScript
+                echo "</script>";
                 die();
             }
         }
@@ -71,12 +69,12 @@ if (isset( $_POST['signin'] ) )
       else {
         echo "File is not an image.";
         $uploadOk = 0;
-        header('Location: ' .'../view/signin.php', true, $permanent ? 301 : 302);
-        exit();
-        // echo "< script>";
-        // // echo "alert('ERROR : Invalid Image File !!');";
-        // echo "window.location.replace('../view/signin.php')"; //Redirects the user with JavaScript
-        // echo "</>";
+        // header('Location: ' .'../view/signin.php', true, $permanent ? 301 : 302);
+        // exit();
+        echo "<script>";
+        echo "alert('ERROR : Invalid Image File !!');";
+        echo "window.location.replace('../view/signin.php')"; //Redirects the user with JavaScript
+        echo "</script>";
         die();
       }
 
@@ -86,23 +84,23 @@ if (isset( $_POST['signin'] ) )
     if (mysqli_query($con, $sql)) {
        
 
-        header('Location: ' .'../view/MainPage.php', true, $permanent ? 301 : 302);
-        exit();
-        // echo "< script>";
-        // // echo "alert('Data Added Sucessfully !!');";
-        // echo "window.location.replace('../view/MainPage.php')"; //Redirects the user with JavaScript
-        // echo "</>";
-        // die(); //Stops PHP from further execution
+        // header('Location: ' .'../view/MainPage.php', true, $permanent ? 301 : 302);
+        // exit();
+        echo "<script>";
+        echo "alert('Data Added Sucessfully !!');";
+        echo "window.location.replace('../view/MainPage.php')"; //Redirects the user with JavaScript
+        echo "</script>";
+        die(); //Stops PHP from further execution
     
     } else {
      
-        header('Location: ' .'../view/signin.php', true, $permanent ? 301 : 302);
-                exit();
-        // echo "<>";
-        // // echo "alert('Please Retry !!');";
-        // echo "window.location.replace('../view/signin.php')"; //Redirects the user with JavaScript
-        // echo "</ script>";
-        // die(); //Stops PHP from further execution
+        // header('Location: ' .'../view/signin.php', true, $permanent ? 301 : 302);
+        //         exit();
+        echo "<script>";
+        echo "alert('Please Retry !!');";
+        echo "window.location.replace('../view/signin.php')"; //Redirects the user with JavaScript
+        echo "</script>";
+        die(); //Stops PHP from further execution
     }
 }
 else{

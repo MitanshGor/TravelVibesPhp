@@ -10,14 +10,14 @@
 
     //$exeQuery = mysqli_query($queryContents);
     if(mysqli_num_rows($conSql)<0){
-        header('Location: ' . '../AdminSection/AdminPage.php', true, $permanent ? 301 : 302);
-        exit();
+        // header('Location: ' . '../AdminSection/AdminPage.php', true, $permanent ? 301 : 302);
+        // exit();
         
-        // echo "< script>";
-        // // echo "alert('No Package Available !!');";
-        // echo "window.location.replace('../AdminSection/AdminPage.php')"; //Redirects the user with JavaScript
-        // echo "< /script>";
-        // die();
+        echo "<script>";
+        echo "alert('No Package Available !!');";
+        echo "window.location.replace('../AdminSection/AdminPage.php')"; //Redirects the user with JavaScript
+        echo "</script>";
+        die();
     }
     
     

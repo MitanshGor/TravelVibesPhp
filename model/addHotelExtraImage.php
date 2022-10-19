@@ -28,7 +28,6 @@
                 $Catch=false;
 
                     if(isset($_FILES["file"]["tmp_name"])==1){
-                        // echo "<br>innnnnnnnnn<br>";
                         $check = getimagesize($_FILES["file"]["tmp_name"]);                                     
                     }
                     else{
@@ -45,19 +44,17 @@
                         
 
                         if (file_exists($target_file)) {
-                                // echo "<br >Sorry, file already exists.";
                                 unlink($target_file);    // DELETE THE FILE
                                 if(move_uploaded_file($_FILES["file"]["tmp_name"],$target_file)) {                 
-                                    // echo "< br > Your File Updated Successfully Uploaded < br >";
                                 }
                                 else{
-                                    header('Location: ' .'../view/AdminSection/viewHotelDetails.php?hotelid='.$Id , true, $permanent ? 301 : 302);
-                                    exit();
-                                    // echo "<script>";
-                                    // // echo "alert('ERROR : Image was unable to save , please try again !!');";
-                                    // echo "window.location.replace('../view/AdminSection/viewHotelDetails.php?hotelid=".$Id."')"; //Redirects the user with JavaScript
-                                    // echo "</script>";
-                                    // die();
+                                    // header('Location: ' .'../view/AdminSection/viewHotelDetails.php?hotelid='.$Id , true, $permanent ? 301 : 302);
+                                    // exit();
+                                    echo "<script>";
+                                    echo "alert('ERROR : Image was unable to save , please try again !!');";
+                                    echo "window.location.replace('../view/AdminSection/viewHotelDetails.php?hotelid=".$Id."')"; //Redirects the user with JavaScript
+                                    echo "</script>";
+                                    die();
                                 }
                             }
                             else
@@ -65,13 +62,13 @@
                                  if(move_uploaded_file($_FILES["file"]["tmp_name"],$target_file)) {                 
                                 }
                                 else{
-                                    header('Location: ' .'../view/AdminSection/viewHotelDetails.php?hotelid='.$Id , true, $permanent ? 301 : 302);
-                                    exit();
-                                    // echo "< script>";
-                                    // // echo "alert('ERROR : Image was unable to save , please try again !!');";
-                                    // echo "window.location.replace('../view/AdminSection/viewHotelDetails.php?hotelid=".$Id."')"; //Redirects the user with JavaScript
-                                    // echo "</>";
-                                    // die();
+                                    // header('Location: ' .'../view/AdminSection/viewHotelDetails.php?hotelid='.$Id , true, $permanent ? 301 : 302);
+                                    // exit();
+                                    echo "<script>";
+                                    echo "alert('ERROR : Image was unable to save , please try again !!');";
+                                    echo "window.location.replace('../view/AdminSection/viewHotelDetails.php?hotelid=".$Id."')"; //Redirects the user with JavaScript
+                                    echo "</script>";
+                                    die();
                                 }
                             }
                     }
@@ -80,13 +77,13 @@
                       echo "File is not an image.";
                       $uploadOk = 0;
               
-                      header('Location: ' .'../view/AdminSection/viewHotelDetails.php?hotelid='.$Id , true, $permanent ? 301 : 302);
-                                exit();
-                    //   echo "< script>";
-                    //   // echo "alert('ERROR : Invalid Image File !!');";
-                    //   echo "window.location.replace('../view/AdminSection/viewHotelDetails.php?hotelid=".$Id."')"; //Redirects the user with JavaScript
-                    //   echo "</>";
-                    //   die();
+                    //   header('Location: ' .'../view/AdminSection/viewHotelDetails.php?hotelid='.$Id , true, $permanent ? 301 : 302);
+                    //             exit();
+                      echo "<script>";
+                      echo "alert('ERROR : Invalid Image File !!');";
+                      echo "window.location.replace('../view/AdminSection/viewHotelDetails.php?hotelid=".$Id."')"; //Redirects the user with JavaScript
+                      echo "</script>";
+                      die();
                     }
 
                         if($target_file!==null)
@@ -94,22 +91,22 @@
                             $sql="insert into ".$hotelimages." (".$hotelImagesId." , ".$Image.") values (".$Id.",'".substr($target_file,42)."');";
                             echo "<br>sql Querry = ".$sql;
                             if (mysqli_query($con, $sql)) {
-                                header('Location: ' .'../view/AdminSection/viewHotelDetails.php?hotelid='.$Id , true, $permanent ? 301 : 302);
-                                exit();
-                                // echo "< script>";
-                                // // echo "alert('Image Added Sucessfully !!');";
-                                // echo "window.location.replace('../view/AdminSection/viewHotelDetails.php?hotelid=".$Id."')"; //Redirects the user with JavaScript
-                                // echo "</>";
-                                // die(); //Stops PHP from further execution
+                                // header('Location: ' .'../view/AdminSection/viewHotelDetails.php?hotelid='.$Id , true, $permanent ? 301 : 302);
+                                // exit();
+                                echo "<script>";
+                                echo "alert('Image Added Sucessfully !!');";
+                                echo "window.location.replace('../view/AdminSection/viewHotelDetails.php?hotelid=".$Id."')"; //Redirects the user with JavaScript
+                                echo "</script>";
+                                die(); //Stops PHP from further execution
                             
                             } else {
-                                header('Location: ' .'../view/AdminSection/viewHotelDetails.php?hotelid='.$Id , true, $permanent ? 301 : 302);
-                                exit();
-                                // echo "<script>";
-                                // // echo "alert('Unable to Add Image ,Please Retry !!');";
-                                // echo "window.location.replace('../view/AdminSection/viewHotelDetails.php?hotelid=".$Id."')"; //Redirects the user with JavaScript
-                                // echo "</script>";
-                                // die(); //Stops PHP from further execution
+                                // header('Location: ' .'../view/AdminSection/viewHotelDetails.php?hotelid='.$Id , true, $permanent ? 301 : 302);
+                                // exit();
+                                echo "<script>";
+                                echo "alert('Unable to Add Image ,Please Retry !!');";
+                                echo "window.location.replace('../view/AdminSection/viewHotelDetails.php?hotelid=".$Id."')"; //Redirects the user with JavaScript
+                                echo "</script>";
+                                die(); //Stops PHP from further execution
                             }
                         }
         }

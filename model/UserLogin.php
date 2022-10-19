@@ -8,7 +8,7 @@
 
         $email = $_POST['email'];
         $pwd =  $_POST['password'];  
-        $sql = "select * from ".$userTable.";";
+        $sql = "select * from ".$userTable." where isActive=1;";
         $conSql=mysqli_query($con,$sql);
     
         if($email===$adminUserName && $pwd===$adminPassword)
@@ -18,11 +18,11 @@
             $_SESSION["userType"]="admin";
             
 
-            header('Location: ' . '../view/MainPage.php', true, $permanent ? 301 : 302);
-            exit();
+            // header('Location: ' . '../view/MainPage.php', true, $permanent ? 301 : 302);
+            // exit();
             // Redirect('https://example.com/', false);
-            // echo "<script>alert('ADMIN Login is Successfull !!');";
-            // echo "window.location.replace('../view/MainPage.php')</script>"; //Redirects the user with JavaScript
+            echo "<script>alert('ADMIN Login is Successfull !!');";
+            echo "window.location.replace('../view/MainPage.php')</script>"; //Redirects the user with JavaScript
             die();
         }
 
@@ -42,22 +42,22 @@
                     $_SESSION["sessionId"]=session_id();
                     $_SESSION["userType"]="user";
 
-                    header('Location: ' .'../view/MainPage.php', true, $permanent ? 301 : 302);
-                    exit();
-                    // echo "< script>";
-                    // // echo "alert('".$_SESSION['userName']." Login is Successfull !!');";
-                    // echo "window.location.replace('../view/MainPage.php')"; //Redirects the user with JavaScript
-                    // echo "</>";
-                    // die();
+                    // header('Location: ' .'../view/MainPage.php', true, $permanent ? 301 : 302);
+                    // exit();
+                    echo "<script>";
+                    echo "alert('".$_SESSION['userName']." Login is Successfull !!');";
+                    echo "window.location.replace('../view/MainPage.php')"; //Redirects the user with JavaScript
+                    echo "</script>";
+                    die();
             }
         }
-                header('Location: ' .'../view/login.php', true, $permanent ? 301 : 302);
-                exit();
-                    // echo "< script>";
-                    // // echo "alert('Invalid Credentials Please Try Again !!');";
-                    // echo "window.location.replace('../view/login.php')"; //Redirects the user with JavaScript
-                    // echo "</>";
-                    // die();
+                // header('Location: ' .'../view/login.php', true, $permanent ? 301 : 302);
+                // exit();
+                    echo "<script>";
+                    echo "alert('Invalid Credentials Please Try Again !!');";
+                    echo "window.location.replace('../view/login.php')"; //Redirects the user with JavaScript
+                    echo "</script>";
+                    die();
     }
     else{
         echo '<h1><center>401 PAGE IS UNAUTHORIZED<center><h1>';

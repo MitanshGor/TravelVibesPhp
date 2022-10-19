@@ -9,14 +9,14 @@
             $conSql=mysqli_query($con,$sql);
 
             if(mysqli_num_rows($conSql)<0){
-                header('Location: ' .'../AdminSection/viewHotels.php', true, $permanent ? 301 : 302);
-                exit();
+                // header('Location: ' .'../AdminSection/viewHotels.php', true, $permanent ? 301 : 302);
+                // exit();
                 
-                // echo "< script>";
-                // // echo "alert('Hotel Images Not Available !!');";
-                // echo "window.location.replace('../AdminSection/viewHotels.php')"; //Redirects the user with JavaScript
-                // echo "</>";
-                // die();
+                echo "<script>";
+                echo "alert('Hotel Images Not Available !!');";
+                echo "window.location.replace('../AdminSection/viewHotels.php')"; //Redirects the user with JavaScript
+                echo "</script>";
+                die();
             }
 
 

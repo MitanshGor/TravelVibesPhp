@@ -15,8 +15,6 @@
           $startDate=$_POST['startDate'];
           $endDate=$_POST['endDate'];
           $initialRommsAvailable=0;
-          // echo "whow";
-          
           
 
           
@@ -31,13 +29,13 @@
                               {
                                   if($roomsNeeded > $row['RoomsAvailable']){
                                       
-                                    header('Location: ' .'../view/UserSection/BookHotel.php?hotelid='.$hotelid , true, $permanent ? 301 : 302);
-                                    exit();
-                                    // echo "< script>";
-                                    //   // echo "alert('ERROR : Hotel currently does not have sufficent empty rooms to require your needs !!');";
-                                    // echo "window.location.replace('../view/UserSection/BookHotel.php?hotelid=".$hotelid."')"; //Redirects the user with JavaScript
-                                    //   echo "</>";
-                                    //   die();
+                                    // header('Location: ' .'../view/UserSection/BookHotel.php?hotelid='.$hotelid , true, $permanent ? 301 : 302);
+                                    // exit();
+                                    echo "<script>";
+                                      echo "alert('ERROR : Hotel currently does not have sufficent empty rooms to require your needs !!');";
+                                    echo "window.location.replace('../view/UserSection/BookHotel.php?hotelid=".$hotelid."')"; //Redirects the user with JavaScript
+                                      echo "</script>";
+                                      die();
                                   }
                                   else{
                                       
@@ -45,13 +43,13 @@
                                   }
                               }
                               else{
-                                header('Location: ' .'../view/UserSection/BookHotel.php?hotelid='.$hotelid, true, $permanent ? 301 : 302);
-                                exit();
-                                //   echo "< script>";
-                                //   // echo "alert('ERROR : you have booked insufficent Rooms W.R.T max people in room!!');";
-                                // echo "window.location.replace('../view/UserSection/BookHotel.php?hotelid=".$hotelid."')"; //Redirects the user with JavaScript
-                                //   echo "</>";
-                                //   die();
+                                // header('Location: ' .'../view/UserSection/BookHotel.php?hotelid='.$hotelid, true, $permanent ? 301 : 302);
+                                // exit();
+                                  echo "<script>";
+                                  echo "alert('ERROR : you have booked insufficent Rooms W.R.T max people in room!!');";
+                                echo "window.location.replace('../view/UserSection/BookHotel.php?hotelid=".$hotelid."')"; //Redirects the user with JavaScript
+                                  echo "</script>";
+                                  die();
                                 }
                             }
 
@@ -82,37 +80,37 @@
                 if(mysqli_query($con,$sqlBookingUser))  // update the hotels romm availability criteria 
                 {
                   
-                  header('Location: ' .'../view/MainPage.php', true, $permanent ? 301 : 302);
-                  exit();
-                  // echo "< script>";
-                  // // echo "alert('Hotel Booked Sucessfully , Hurrey !!');";
-                  // echo "window.location.replace('../view/MainPage.php')"; //Redirects the user with JavaScript
-                  // echo "</>";
-                  // die();
+                  // header('Location: ' .'../view/MainPage.php', true, $permanent ? 301 : 302);
+                  // exit();
+                  echo "<script>";
+                  echo "alert('Hotel Booked Sucessfully , Hurrey !!');";
+                  echo "window.location.replace('../view/MainPage.php')"; //Redirects the user with JavaScript
+                  echo "</script>";
+                  die();
                 } 
                 else{
-                  header('Location: ' .'../view/UserSection/BookHotel.php?hotelid='.$hotelid, true, $permanent ? 301 : 302);
-                  exit();  
+                  // header('Location: ' .'../view/UserSection/BookHotel.php?hotelid='.$hotelid, true, $permanent ? 301 : 302);
+                  // exit();  
                   
-                  // echo "<script>";
-                  // // echo "alert('Hotel Booking Caused Error  UHUH, Try Again !!');";
-                  // echo "window.location.replace('../view/UserSection/BookHotel.php?hotelid=".$hotelid."')"; //Redirects the user with JavaScript
-                  // echo "</script>";
-                  // die();
+                  echo "<script>";
+                  echo "alert('Hotel Booking Caused Error  UHUH, Try Again !!');";
+                  echo "window.location.replace('../view/UserSection/BookHotel.php?hotelid=".$hotelid."')"; //Redirects the user with JavaScript
+                  echo "</script>";
+                  die();
                 }
               }
               
           }
           else{
 
-            header('Location: ' .'../view/UserSection/BookHotel.php?hotelid='.$hotelid, true, $permanent ? 301 : 302);
-            exit();  
+            // header('Location: ' .'../view/UserSection/BookHotel.php?hotelid='.$hotelid, true, $permanent ? 301 : 302);
+            // exit();  
             
-            // echo "< script>";
-            // // echo "alert('Hotel Booking Caused Error , Try Again !!');";
-            // echo "window.location.replace('../view/UserSection/BookHotel.php?hotelid=".$hotelid."')"; //Redirects the user with JavaScript
-            // echo "</>";
-            // die();
+            echo "<script>";
+            echo "alert('Hotel Booking Caused Error , Try Again !!');";
+            echo "window.location.replace('../view/UserSection/BookHotel.php?hotelid=".$hotelid."')"; //Redirects the user with JavaScript
+            echo "</script>";
+            die();
           }
           
           
